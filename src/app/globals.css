@@ -40,11 +40,25 @@
   --font-mono: var(--font-jetbrains-mono);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-bg-deep);
   color: var(--color-text);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
+}
+
+@keyframes flow-dash {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+.animate-flow {
+  animation: flow-dash 2.4s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
