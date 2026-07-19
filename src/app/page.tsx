@@ -3,6 +3,8 @@ import WhoWeAre from "@/components/sections/home/WhoWeAre";
 import WhyDifferent from "@/components/sections/home/WhyDifferent";
 import ProjectPreview from "@/components/sections/home/ProjectPreview";
 import WhereWeOperate from "@/components/sections/home/WhereWeOperate";
+import OurCrops from "@/components/sections/home/OurCrops";
+import Faq from "@/components/sections/home/Faq";
 
 export default function HomePage() {
   return (
@@ -12,6 +14,8 @@ export default function HomePage() {
       <WhyDifferent />
       <ProjectPreview />
       <WhereWeOperate />
+      <OurCrops />
+      <Faq />
     </main>
   );
 }

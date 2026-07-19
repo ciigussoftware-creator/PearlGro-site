@@ -31,6 +31,10 @@
   --color-ink-accent: #1a4d30;
   --color-label: #6b8a77;
 
+  /* Card surfaces on light-bg sections (Figma: Our Crops) */
+  --color-card-light: #e8e6e0;
+  --color-image-bg-light: #c8c5bc;
+
   --font-heading: var(--font-space-grotesk);
   --font-body: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
