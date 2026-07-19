@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import SiteLoader from "@/components/SiteLoader";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -43,6 +44,7 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} font-body antialiased`}
       >
+        <SiteLoader />
         <Nav />
         {children}
         <Footer />
