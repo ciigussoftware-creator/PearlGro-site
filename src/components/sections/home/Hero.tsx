@@ -65,8 +65,8 @@ export default function Hero() {
           className="mt-16 hidden h-12 w-px bg-linear-to-b from-glow to-transparent opacity-50 lg:block"
         />
 
-        <div className="mt-12 w-full max-w-117 rounded-t-[20px] border border-accent bg-[rgba(10,20,16,0.62)] px-6 py-7 sm:px-12.25 lg:absolute lg:inset-x-0 lg:bottom-0 lg:mx-auto lg:mt-0 lg:w-117">
-          <div className="grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-4 sm:gap-x-0">
+        <div className="mt-12 w-full max-w-135 rounded-t-[20px] border border-accent bg-[rgba(10,20,16,0.62)] px-6 py-7 sm:px-10 lg:absolute lg:inset-x-0 lg:bottom-0 lg:mx-auto lg:mt-0 lg:w-[540px]">
+          <div className="grid grid-cols-2 gap-x-10 gap-y-6 sm:grid-cols-4 sm:gap-x-0">
             {stats.map((stat, index) => (
               <StatCard
                 key={stat.label}
@@ -74,7 +74,7 @@ export default function Hero() {
                 label={stat.label}
                 decimals={stat.decimals}
                 className={
-                  index > 0 ? "sm:border-l sm:border-accent sm:pl-5" : undefined
+                  index > 0 ? "sm:border-l sm:border-accent px-4" : "px-4"
                 }
               />
             ))}
