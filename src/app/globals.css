@@ -25,6 +25,12 @@
   /* Investment moments ONLY — see GOLD RULE in CLAUDE.md */
   --color-gold: #e8c46b;
 
+  /* Text on light-bg sections (Figma: Who We Are + likely repeats) */
+  --color-ink: #0d2118;
+  --color-ink-muted: #4a6858;
+  --color-ink-accent: #1a4d30;
+  --color-label: #6b8a77;
+
   --font-heading: var(--font-space-grotesk);
   --font-body: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
