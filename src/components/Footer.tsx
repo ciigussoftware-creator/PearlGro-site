@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import Container from "@/components/Container";
+import Button from "@/components/Button";
 import type { NavLink } from "@/types";
 
 const footerNavLinks: NavLink[] = [
@@ -28,7 +30,7 @@ export default function Footer() {
       >
         PEARL GRO
       </p>
-      <div className="relative mx-auto w-full max-w-[1120px] px-6 pt-20 lg:px-0">
+      <Container className="relative pt-20">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div>
             <Image
@@ -136,12 +138,7 @@ export default function Footer() {
               Phase 1 has 10 investor slots. Register your interest and a
               representative will be in touch.
             </p>
-            <Link
-              href="/invest"
-              className="inline-flex h-[45px] items-center justify-center rounded-full bg-accent px-6 text-[14px] font-semibold text-accent-ink shadow-[0_0_8px_rgba(47,229,140,0.2)] transition-colors hover:bg-accent-hover"
-            >
-              Register Interest
-            </Link>
+            <Button href="/invest">Register Interest</Button>
           </div>
         </div>
 
@@ -162,7 +159,7 @@ export default function Footer() {
             ))}
           </ul>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }
