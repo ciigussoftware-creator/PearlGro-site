@@ -54,7 +54,7 @@ function AccordionPanel({ answer }: { answer: string }) {
   );
 
   return (
-    <p ref={panelRef} className="pb-6 text-[15px] leading-[1.75] text-gray-600">
+    <p ref={panelRef} className="pb-7 text-[15px] leading-[1.75] text-muted">
       {answer}
     </p>
   );
@@ -72,18 +72,31 @@ function AccordionItem({
   isLast: boolean;
 }) {
   return (
-    <div className={`faq-item w-full ${!isLast ? "border-b border-gray-200" : ""}`}>
+    <div className={`faq-item w-full ${!isLast ? "border-b border-text/8" : ""}`}>
       <button
         type="button"
         onClick={onToggle}
         aria-expanded={isOpen}
-        className="flex w-full items-center justify-between gap-6 py-6 text-left"
+        className="flex w-full items-center justify-between gap-6 py-7 text-left"
       >
-        <span className="text-[17px] font-medium text-gray-900">
+        <span
+          className={`font-heading text-[18px] font-medium ${
+            isOpen ? "text-text" : "text-muted"
+          }`}
+        >
           {item.question}
         </span>
-        <span className="text-2xl font-light text-teal-700 shrink-0">
-          {isOpen ? "−" : "+"}
+        <span
+          className={`flex size-8 shrink-0 items-center justify-center rounded-full border ${
+            isOpen ? "border-accent" : "border-text/12"
+          }`}
+        >
+          <Image
+            src={isOpen ? "/home/icons/faq-minus.svg" : "/home/icons/faq-plus.svg"}
+            alt=""
+            width={14}
+            height={14}
+          />
         </span>
       </button>
       {isOpen && <AccordionPanel answer={item.answer} />}
@@ -99,7 +112,6 @@ export default function FaqAccordion() {
     () => {
       if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-      // Heading animation
       gsap.fromTo(
         ".faq-heading",
         { opacity: 0, y: 40 },
@@ -115,7 +127,6 @@ export default function FaqAccordion() {
         },
       );
 
-      // Staggered row animations
       gsap.fromTo(
         ".faq-item",
         { opacity: 0, y: 30 },
@@ -136,25 +147,16 @@ export default function FaqAccordion() {
   );
 
   return (
-    <section
-      ref={sectionRef}
-      className="w-full  px-6 py-16 md:px-16 lg:px-24"
-    >
-      <h2 className="faq-heading mb-10 font-heading text-4xl font-bold text-gray-900 md:text-5xl">
-        Frequently Asked Questions
-      </h2>
-
-      <div className="w-full border-t border-gray-200">
-        {faqItems.map((item, index) => (
-          <AccordionItem
-            key={item.question}
-            item={item}
-            isOpen={openIndex === index}
-            onToggle={() => setOpenIndex(openIndex === index ? -1 : index)}
-            isLast={index === faqItems.length - 1}
-          />
-        ))}
-      </div>
+    <section ref={sectionRef} className="flex flex-col items-start">
+      {faqItems.map((item, index) => (
+        <AccordionItem
+          key={item.question}
+          item={item}
+          isOpen={openIndex === index}
+          onToggle={() => setOpenIndex(openIndex === index ? -1 : index)}
+          isLast={index === faqItems.length - 1}
+        />
+      ))}
     </section>
   );
 }
