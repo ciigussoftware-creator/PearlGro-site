@@ -1,0 +1,23 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 52.8175 46.2153" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="LEDIcon">
+<path id="Vector" d="M43.7394 18.1561H9.07784C7.71048 18.1561 6.60202 19.2646 6.60202 20.632V25.5836C6.60202 26.951 7.71048 28.0594 9.07784 28.0594H43.7394C45.1067 28.0594 46.2152 26.951 46.2152 25.5836V20.632C46.2152 19.2646 45.1067 18.1561 43.7394 18.1561Z" stroke="var(--stroke-0, #2FE58C)" stroke-opacity="0.7" stroke-width="1.23791"/>
+<path id="Vector_2" opacity="0.6" d="M11.5537 25.171C12.6931 25.171 13.6169 24.2473 13.6169 23.1078C13.6169 21.9683 12.6931 21.0446 11.5537 21.0446C10.4142 21.0446 9.49048 21.9683 9.49048 23.1078C9.49048 24.2473 10.4142 25.171 11.5537 25.171Z" fill="var(--fill-0, #2FE58C)"/>
+<path id="Vector_3" opacity="0.6" d="M18.1559 25.171C19.2953 25.171 20.219 24.2473 20.219 23.1078C20.219 21.9683 19.2953 21.0446 18.1559 21.0446C17.0164 21.0446 16.0927 21.9683 16.0927 23.1078C16.0927 24.2473 17.0164 25.171 18.1559 25.171Z" fill="var(--fill-0, #2FE58C)"/>
+<path id="Vector_4" opacity="0.6" d="M24.758 25.171C25.8975 25.171 26.8212 24.2473 26.8212 23.1078C26.8212 21.9683 25.8975 21.0446 24.758 21.0446C23.6186 21.0446 22.6949 21.9683 22.6949 23.1078C22.6949 24.2473 23.6186 25.171 24.758 25.171Z" fill="var(--fill-0, #2FE58C)"/>
+<path id="Vector_5" opacity="0.6" d="M31.3602 25.171C32.4997 25.171 33.4234 24.2473 33.4234 23.1078C33.4234 21.9683 32.4997 21.0446 31.3602 21.0446C30.2208 21.0446 29.2971 21.9683 29.2971 23.1078C29.2971 24.2473 30.2208 25.171 31.3602 25.171Z" fill="var(--fill-0, #2FE58C)"/>
+<path id="Vector_6" opacity="0.6" d="M37.9624 25.171C39.1019 25.171 40.0256 24.2473 40.0256 23.1078C40.0256 21.9683 39.1019 21.0446 37.9624 21.0446C36.823 21.0446 35.8993 21.9683 35.8993 23.1078C35.8993 24.2473 36.823 25.171 37.9624 25.171Z" fill="var(--fill-0, #2FE58C)"/>
+<path id="Vector_7" opacity="0.6" d="M11.5537 28.0594L6.60202 39.6133" stroke="var(--stroke-0, #2FE58C)" stroke-opacity="0.35" stroke-width="0.825274"/>
+<path id="Vector_8" opacity="0.6" d="M18.1559 28.0594L13.2042 39.6133" stroke="var(--stroke-0, #2FE58C)" stroke-opacity="0.35" stroke-width="0.825274"/>
+<path id="Vector_9" opacity="0.6" d="M24.758 28.0594L19.8064 39.6133" stroke="var(--stroke-0, #2FE58C)" stroke-opacity="0.35" stroke-width="0.825274"/>
+<path id="Vector_10" opacity="0.6" d="M31.3602 28.0594L26.4086 39.6133" stroke="var(--stroke-0, #2FE58C)" stroke-opacity="0.35" stroke-width="0.825274"/>
+<path id="Vector_11" opacity="0.6" d="M37.9624 28.0594L33.0108 39.6133" stroke="var(--stroke-0, #2FE58C)" stroke-opacity="0.35" stroke-width="0.825274"/>
+<path id="Vector_12" opacity="0.6" d="M11.5537 28.0594L16.5053 39.6133" stroke="var(--stroke-0, #2FE58C)" stroke-opacity="0.35" stroke-width="0.825274"/>
+<path id="Vector_13" opacity="0.6" d="M18.1559 28.0594L23.1075 39.6133" stroke="var(--stroke-0, #2FE58C)" stroke-opacity="0.35" stroke-width="0.825274"/>
+<path id="Vector_14" opacity="0.6" d="M24.758 28.0594L29.7097 39.6133" stroke="var(--stroke-0, #2FE58C)" stroke-opacity="0.35" stroke-width="0.825274"/>
+<path id="Vector_15" opacity="0.6" d="M31.3602 28.0594L36.3119 39.6133" stroke="var(--stroke-0, #2FE58C)" stroke-opacity="0.35" stroke-width="0.825274"/>
+<path id="Vector_16" opacity="0.6" d="M37.9624 28.0594L42.9141 39.6133" stroke="var(--stroke-0, #2FE58C)" stroke-opacity="0.35" stroke-width="0.825274"/>
+<path id="Vector_17" d="M16.5053 18.1561V11.554" stroke="var(--stroke-0, #8FA69A)" stroke-opacity="0.45" stroke-width="0.825274"/>
+<path id="Vector_18" d="M36.3119 18.1561V11.554" stroke="var(--stroke-0, #8FA69A)" stroke-opacity="0.45" stroke-width="0.825274"/>
+<path id="Vector_19" d="M16.5053 11.554H36.3119" stroke="var(--stroke-0, #8FA69A)" stroke-opacity="0.45" stroke-width="0.825274"/>
+</g>
+</svg>

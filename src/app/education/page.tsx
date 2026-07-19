@@ -1,20 +1,28 @@
 import type { Metadata } from "next";
+import EducationHero from "@/components/sections/education/EducationHero";
+import TechCards from "@/components/sections/education/TechCards";
+import SustainabilityGrid from "@/components/sections/education/SustainabilityGrid";
+import RainwaterSection from "@/components/sections/education/RainwaterSection";
+import SolarSection from "@/components/sections/education/SolarSection";
+import SeedToShelf from "@/components/sections/education/SeedToShelf";
+import SoftClosing from "@/components/sections/education/SoftClosing";
 
 export const metadata: Metadata = {
   title: "Education",
   description:
-    "Learn about protected greenhouse cultivation and modern agri-tech practices with Pearl Gro.",
+    "An inside look at the technology and thinking behind Pearl Gro's cultivation model - for students, researchers, and the curious.",
 };
 
 export default function EducationPage() {
   return (
-    <main className="mx-auto w-full max-w-[1120px] px-6 py-[120px]">
-      <p className="font-mono text-[13px] uppercase tracking-[1.5px] text-muted">
-        Education
-      </p>
-      <h1 className="pt-4 font-heading text-[clamp(40px,6vw,88px)] font-bold tracking-tight text-text">
-        Education
-      </h1>
+    <main>
+      <EducationHero />
+      <TechCards />
+      <SustainabilityGrid />
+      <RainwaterSection />
+      <SolarSection />
+      <SeedToShelf />
+      <SoftClosing />
     </main>
   );
 }

@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 52.8175 46.2153" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="SensorIcon">
+<path id="Vector" d="M26.4086 28.8847C29.5991 28.8847 32.1855 26.2983 32.1855 23.1078C32.1855 19.9173 29.5991 17.3309 26.4086 17.3309C23.2181 17.3309 20.6317 19.9173 20.6317 23.1078C20.6317 26.2983 23.2181 28.8847 26.4086 28.8847Z" stroke="var(--stroke-0, #2FE58C)" stroke-opacity="0.7" stroke-width="1.23791"/>
+<path id="Vector_2" opacity="0.5" d="M26.4086 25.5836C27.776 25.5836 28.8844 24.4751 28.8844 23.1078C28.8844 21.7404 27.776 20.632 26.4086 20.632C25.0412 20.632 23.9328 21.7404 23.9328 23.1078C23.9328 24.4751 25.0412 25.5836 26.4086 25.5836Z" fill="var(--fill-0, #2FE58C)"/>
+<path id="Vector_3" d="M18.1559 14.855C11.5537 20.3569 11.5537 25.8587 18.1559 31.3605" stroke="var(--stroke-0, #2FE58C)" stroke-opacity="0.7" stroke-width="1.23791"/>
+<path id="Vector_4" d="M34.6613 14.855C41.2635 20.3569 41.2635 25.8587 34.6613 31.3605" stroke="var(--stroke-0, #2FE58C)" stroke-opacity="0.7" stroke-width="1.23791"/>
+<path id="Vector_5" d="M13.2042 9.9034C5.50166 18.7063 5.50166 27.5092 13.2042 36.3122" stroke="var(--stroke-0, #2FE58C)" stroke-opacity="0.35" stroke-width="0.825274"/>
+<path id="Vector_6" d="M39.613 9.9034C47.3155 18.7063 47.3155 27.5092 39.613 36.3122" stroke="var(--stroke-0, #2FE58C)" stroke-opacity="0.35" stroke-width="0.825274"/>
+<path id="Vector_7" d="M26.4086 6.6023V1.65066" stroke="var(--stroke-0, #8FA69A)" stroke-opacity="0.45" stroke-width="0.825274"/>
+<path id="Vector_8" opacity="0.6" d="M26.4086 3.30121C27.3202 3.30121 28.0591 2.56223 28.0591 1.65066C28.0591 0.739087 27.3202 0.000111445 26.4086 0.000111445C25.497 0.000111445 24.758 0.739087 24.758 1.65066C24.758 2.56223 25.497 3.30121 26.4086 3.30121Z" fill="var(--fill-0, #8FA69A)" fill-opacity="0.45"/>
+</g>
+</svg>
