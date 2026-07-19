@@ -1,0 +1,15 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 90 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="SproutIcon" clip-path="url(#clip0_0_42)">
+<path id="Vector" d="M45 105V30" stroke="var(--stroke-0, #2FE58C)" stroke-width="1.5" stroke-linecap="round"/>
+<path id="Vector_2" d="M45 65C30 58 16 44 20 28C30 32 42 46 45 65Z" fill="var(--fill-0, #2FE58C)" fill-opacity="0.08" stroke="var(--stroke-0, #2FE58C)" stroke-width="1.2"/>
+<path id="Vector_3" d="M45 50C60 40 74 26 70 10C60 14 47 30 45 50Z" fill="var(--fill-0, #2FE58C)" fill-opacity="0.08" stroke="var(--stroke-0, #2FE58C)" stroke-width="1.2"/>
+<path id="Vector_4" opacity="0.4" d="M45 105C37.6667 107 31.3333 110 26 114" stroke="var(--stroke-0, #2FE58C)" stroke-linecap="round" stroke-dasharray="3 2"/>
+<path id="Vector_5" opacity="0.4" d="M45 105C52.3333 107 58.6667 110 64 114" stroke="var(--stroke-0, #2FE58C)" stroke-linecap="round" stroke-dasharray="3 2"/>
+<path id="Vector_6" opacity="0.3" d="M45 105C44.3333 109.667 44 114 44 118" stroke="var(--stroke-0, #2FE58C)" stroke-linecap="round" stroke-dasharray="3 2"/>
+</g>
+<defs>
+<clipPath id="clip0_0_42">
+<rect width="90" height="110" fill="white"/>
+</clipPath>
+</defs>
+</svg>

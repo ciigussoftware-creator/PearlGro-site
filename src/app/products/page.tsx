@@ -1,20 +1,24 @@
 import type { Metadata } from "next";
+import ProductsHero from "@/components/sections/products/ProductsHero";
+import CropShowcase from "@/components/sections/products/CropShowcase";
+import GrownToOrder from "@/components/sections/products/GrownToOrder";
+import EnvironmentStrip from "@/components/sections/products/EnvironmentStrip";
+import DualCTA from "@/components/sections/products/DualCTA";
 
 export const metadata: Metadata = {
   title: "Products",
   description:
-    "Crops grown in Pearl Gro greenhouses — Scotch Bonnet, Brinjal, Tomato, Capsicum, and Salad Cucumber.",
+    "Crops grown in Pearl Gro's controlled-environment greenhouses — Scotch Bonnet, Brinjal, Tomato, Capsicum, and Salad Cucumber.",
 };
 
 export default function ProductsPage() {
   return (
-    <main className="mx-auto w-full max-w-[1120px] px-6 py-[120px]">
-      <p className="font-mono text-[13px] uppercase tracking-[1.5px] text-muted">
-        Products
-      </p>
-      <h1 className="pt-4 font-heading text-[clamp(40px,6vw,88px)] font-bold tracking-tight text-text">
-        Products
-      </h1>
-    </main>
+    <>
+      <ProductsHero />
+      <CropShowcase />
+      <GrownToOrder />
+      <EnvironmentStrip />
+      <DualCTA />
+    </>
   );
 }

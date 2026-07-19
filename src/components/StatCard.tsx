@@ -51,11 +51,11 @@ export default function StatCard({
     <div className={className}>
       <p
         ref={numberRef}
-        className="font-mono text-[44px] leading-[44px] font-light tracking-[-0.88px] text-accent"
+        className="font-mono text-center text-[44px] leading-11 font-light tracking-[-0.88px] text-accent"
       >
         0
       </p>
-      <p className="w-full pt-1 text-[10px] leading-[15px] tracking-[1.4px] text-muted uppercase">
+      <p className="w-full pt-1 text-center text-[10px] leading-3.75 tracking-[1.4px] text-muted uppercase">
         {label}
       </p>
     </div>

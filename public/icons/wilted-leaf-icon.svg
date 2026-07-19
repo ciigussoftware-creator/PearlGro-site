@@ -1,0 +1,15 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 90 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="WiltedLeafIcon" clip-path="url(#clip0_wilted)">
+<path id="Stem" d="M45 105V68C45 68 46 50 38 40C34 35 32 28 34 20" stroke="var(--stroke-0, #2FE58C)" stroke-width="1.5" stroke-linecap="round"/>
+<path id="Leaf1" d="M38 40C27 37 17 28 19 16C29 19 39 29 38 40Z" fill="var(--fill-0, #2FE58C)" fill-opacity="0.07" stroke="var(--stroke-0, #2FE58C)" stroke-width="1.2"/>
+<path id="Leaf2" d="M34 20C29 13 30 6 38 3C40 10 38 17 34 20Z" fill="var(--fill-0, #2FE58C)" fill-opacity="0.06" stroke="var(--stroke-0, #2FE58C)" stroke-width="1.2" opacity="0.65"/>
+<path id="Ground1" opacity="0.4" d="M45 105C37.6667 107 31.3333 110 26 114" stroke="var(--stroke-0, #2FE58C)" stroke-linecap="round" stroke-dasharray="3 2"/>
+<path id="Ground2" opacity="0.4" d="M45 105C52.3333 107 58.6667 110 64 114" stroke="var(--stroke-0, #2FE58C)" stroke-linecap="round" stroke-dasharray="3 2"/>
+<path id="Ground3" opacity="0.3" d="M45 105C44.3333 109.667 44 114 44 118" stroke="var(--stroke-0, #2FE58C)" stroke-linecap="round" stroke-dasharray="3 2"/>
+</g>
+<defs>
+<clipPath id="clip0_wilted">
+<rect width="90" height="110" fill="white"/>
+</clipPath>
+</defs>
+</svg>

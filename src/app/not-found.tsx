@@ -1,28 +1,55 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import Button from "@/components/Button";
+import ErrorHero from "@/components/ErrorHero";
 
 export const metadata: Metadata = {
   title: "Page Not Found",
 };
 
+const wayfindingLinks = [
+  { label: "The Investment", href: "/invest" },
+  { label: "What We Grow", href: "/products" },
+  { label: "Learn", href: "/education" },
+];
+
 export default function NotFound() {
   return (
-    <main className="mx-auto flex w-full max-w-[1120px] flex-col items-start px-6 py-[120px]">
-      <p className="font-mono text-[13px] uppercase tracking-[1.5px] text-muted">
-        404
-      </p>
-      <h1 className="pt-4 font-heading text-[clamp(40px,6vw,88px)] font-bold tracking-tight text-text">
-        Page not found
-      </h1>
-      <p className="max-w-[520px] pt-6 text-[17px] leading-[1.7] text-muted">
-        The page you are looking for does not exist or has been moved.
-      </p>
-      <Link
-        href="/"
-        className="mt-10 inline-flex h-[45px] items-center justify-center rounded-full bg-accent px-6 text-[14px] font-semibold text-accent-ink shadow-[0_0_8px_rgba(47,229,140,0.2)] transition-colors hover:bg-accent-hover"
-      >
-        Back to Home
-      </Link>
-    </main>
+    <ErrorHero
+      errorCode="404"
+      eyebrow="Error 404 — Page Not Found"
+      heading="This field hasn't been planted yet."
+      description="The page you're looking for doesn't exist or may have moved. Let's get you back to solid ground."
+      iconSrc="/icons/sprout-icon.svg"
+      actions={
+        <>
+          <Button href="/">Back to home</Button>
+          <Button href="/contact" variant="ghost">
+            Contact Us
+          </Button>
+        </>
+      }
+      wayfinding={
+        <nav
+          aria-label="Suggested pages"
+          className="flex flex-wrap items-center justify-center gap-5"
+        >
+          {wayfindingLinks.map((link, index) => (
+            <span key={link.href} className="flex items-center gap-5">
+              {index > 0 && (
+                <span aria-hidden className="h-3.5 w-px bg-muted/20" />
+              )}
+              <Link
+                href={link.href}
+                className="inline-flex items-center gap-1.5 font-mono text-[9px] tracking-[1.8px] text-muted/50 uppercase transition-colors hover:text-muted"
+              >
+                {link.label}
+                <span aria-hidden>→</span>
+              </Link>
+            </span>
+          ))}
+        </nav>
+      }
+    />
   );
 }
