@@ -39,7 +39,7 @@ export default function Hero() {
         />
       </div>
 
-      <Container className="relative flex flex-col items-start pt-24 pb-24 lg:pt-[120px] lg:pb-[160px]">
+      <Container className="relative flex flex-col items-start pt-24 pb-0 lg:pt-[120px] lg:pb-[160px]">
         <p className="font-mono text-[11px] tracking-[1.98px] text-muted uppercase">
           Sri Lanka · Controlled-Environment Agriculture
         </p>
@@ -65,7 +65,7 @@ export default function Hero() {
           className="mt-16 hidden h-12 w-px bg-gradient-to-b from-glow to-transparent opacity-50 lg:block"
         />
 
-        <div className="mt-12 w-full max-w-[468px] rounded-t-[20px] border border-accent bg-[rgba(10,20,16,0.62)] px-6 py-7 sm:px-[49px] lg:absolute lg:bottom-0 lg:left-[320px] lg:mt-0 lg:w-[468px]">
+        <div className="mx-auto mt-12 w-full max-w-[468px] rounded-t-[20px] border border-accent bg-[rgba(10,20,16,0.62)] px-6 py-7 sm:px-[49px] lg:absolute lg:inset-x-0 lg:bottom-0 lg:mt-0 lg:w-[468px]">
           <div className="grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-4 sm:gap-x-0">
             {stats.map((stat, index) => (
               <StatCard
