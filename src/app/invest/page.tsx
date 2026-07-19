@@ -1,4 +1,11 @@
 import type { Metadata } from "next";
+import InvestHero from "@/components/sections/invest/InvestHero";
+import OpportunityGrid from "@/components/sections/invest/OpportunityGrid";
+import HowItWorks from "@/components/sections/invest/HowItWorks";
+import BizPlanBanner from "@/components/sections/invest/BizPlanBanner";
+import RoadAhead from "@/components/sections/invest/RoadAhead";
+import ThambuttegamaTeaser from "@/components/sections/invest/ThambuttegamaTeaser";
+import LeadForm from "@/components/sections/invest/LeadForm";
 
 export const metadata: Metadata = {
   title: "Invest",
@@ -8,13 +15,14 @@ export const metadata: Metadata = {
 
 export default function InvestPage() {
   return (
-    <main className="mx-auto w-full max-w-[1120px] px-6 py-[120px]">
-      <p className="font-mono text-[13px] uppercase tracking-[1.5px] text-muted">
-        Invest
-      </p>
-      <h1 className="pt-4 font-heading text-[clamp(40px,6vw,88px)] font-bold tracking-tight text-text">
-        Invest
-      </h1>
+    <main>
+      <InvestHero />
+      <OpportunityGrid />
+      <HowItWorks />
+      <BizPlanBanner />
+      <RoadAhead />
+      <ThambuttegamaTeaser />
+      <LeadForm />
     </main>
   );
 }
