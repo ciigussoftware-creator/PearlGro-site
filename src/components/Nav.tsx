@@ -14,11 +14,11 @@ const navLinks: NavLink[] = [
 
 export default function Nav() {
   return (
-    <header className="w-full pt-6 pb-1">
+    <header className="sticky top-0 z-50 w-full border-b border-text/6 bg-bg-black/80 pt-6 pb-1 backdrop-blur-xl">
       <Container>
         <nav
           aria-label="Main navigation"
-          className="flex flex-wrap items-center justify-center gap-x-[38px] gap-y-2"
+          className="flex flex-wrap items-center justify-center gap-x-9.5 gap-y-2"
         >
           <Link href="/" aria-label="Pearl Gro home" className="flex items-center">
             <Image
@@ -29,12 +29,12 @@ export default function Nav() {
               priority
             />
           </Link>
-          <ul className="flex flex-wrap items-center justify-center gap-x-[36px] gap-y-1">
+          <ul className="flex flex-wrap items-center justify-center gap-x-9 gap-y-1">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="inline-flex min-h-[44px] items-center text-[13px] font-medium tracking-[0.26px] text-text transition-colors hover:text-accent"
+                  className="inline-flex min-h-11 items-center text-[13px] font-medium tracking-[0.26px] text-text transition-colors hover:text-accent"
                 >
                   {link.label}
                 </Link>

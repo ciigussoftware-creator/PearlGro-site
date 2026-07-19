@@ -31,7 +31,7 @@ export default function Hero() {
         />
         <div
           aria-hidden
-          className="absolute -top-24 -left-16 h-[420px] w-[560px]"
+          className="absolute -top-24 -left-16 h-105 w-140"
           style={{
             background:
               "radial-gradient(ellipse at center, rgba(47,229,140,0.07) 0%, rgba(0,0,0,0) 70%)",
@@ -39,18 +39,18 @@ export default function Hero() {
         />
       </div>
 
-      <Container className="relative flex flex-col items-start pt-24 pb-0 lg:pt-[120px] lg:pb-[160px]">
+      <Container className="relative flex flex-col items-start pt-24 pb-24 lg:pt-30 lg:pb-40">
         <p className="font-mono text-[11px] tracking-[1.98px] text-muted uppercase">
           Sri Lanka · Controlled-Environment Agriculture
         </p>
 
-        <h1 className="max-w-[820px] pt-7 font-heading text-[clamp(36px,6vw,58.9px)] leading-[1.05] font-bold tracking-[-1.18px] text-text">
+        <h1 className="max-w-205 pt-7 font-heading text-[clamp(36px,6vw,58.9px)] leading-[1.05] font-bold tracking-[-1.18px] text-text">
           Redefining the{" "}
           <span className="text-green-2">Future of Agriculture</span> in Sri
           Lanka
         </h1>
 
-        <p className="max-w-[580px] pt-7 text-[18px] leading-[1.7] text-text">
+        <p className="max-w-145 pt-7 text-[18px] leading-[1.7] text-text">
           Pearl Gro is building Sri Lanka&rsquo;s most advanced greenhouse
           cultivation project, combining controlled-environment farming,
           renewable energy, and expert agricultural management.
@@ -62,11 +62,11 @@ export default function Hero() {
 
         <div
           aria-hidden
-          className="mt-16 hidden h-12 w-px bg-gradient-to-b from-glow to-transparent opacity-50 lg:block"
+          className="mt-16 hidden h-12 w-px bg-linear-to-b from-glow to-transparent opacity-50 lg:block"
         />
 
-        <div className="mx-auto mt-12 w-full max-w-[468px] rounded-t-[20px] border border-accent bg-[rgba(10,20,16,0.62)] px-6 py-7 sm:px-[49px] lg:absolute lg:inset-x-0 lg:bottom-0 lg:mt-0 lg:w-[468px]">
-          <div className="grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-4 sm:gap-x-0">
+        <div className="mt-12 w-full max-w-135 rounded-t-[20px] border border-accent bg-[rgba(10,20,16,0.62)] px-6 py-7 sm:px-10 lg:absolute lg:inset-x-0 lg:bottom-0 lg:mx-auto lg:mt-0 lg:w-[540px]">
+          <div className="grid grid-cols-2 gap-x-10 gap-y-6 sm:grid-cols-4 sm:gap-x-0">
             {stats.map((stat, index) => (
               <StatCard
                 key={stat.label}
@@ -74,9 +74,7 @@ export default function Hero() {
                 label={stat.label}
                 decimals={stat.decimals}
                 className={
-                  index > 0
-                    ? "sm:border-l sm:border-accent sm:pl-5"
-                    : undefined
+                  index > 0 ? "sm:border-l sm:border-accent px-4" : "px-4"
                 }
               />
             ))}
