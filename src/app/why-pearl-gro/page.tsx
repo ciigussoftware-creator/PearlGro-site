@@ -1,4 +1,10 @@
 import type { Metadata } from "next";
+import WhyHero from "@/components/sections/why/WhyHero";
+import ThreePillars from "@/components/sections/why/ThreePillars";
+import VerticalIntegration from "@/components/sections/why/VerticalIntegration";
+import ComparisonTable from "@/components/sections/why/ComparisonTable";
+import GrownToSpec from "@/components/sections/why/GrownToSpec";
+import ClosingCta from "@/components/sections/why/ClosingCta";
 
 export const metadata: Metadata = {
   title: "Why Pearl Gro",
@@ -8,13 +14,13 @@ export const metadata: Metadata = {
 
 export default function WhyPearlGroPage() {
   return (
-    <main className="mx-auto w-full max-w-[1120px] px-6 py-[120px]">
-      <p className="font-mono text-[13px] uppercase tracking-[1.5px] text-muted">
-        Why Pearl Gro
-      </p>
-      <h1 className="pt-4 font-heading text-[clamp(40px,6vw,88px)] font-bold tracking-tight text-text">
-        Why Pearl Gro
-      </h1>
+    <main>
+      <WhyHero />
+      <ThreePillars />
+      <VerticalIntegration />
+      <ComparisonTable />
+      <GrownToSpec />
+      <ClosingCta />
     </main>
   );
 }
