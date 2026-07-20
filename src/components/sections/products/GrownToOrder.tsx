@@ -21,7 +21,7 @@ export default function GrownToOrder() {
 
             <p className="max-w-[420px] pt-5 text-[15px] leading-[1.75] text-ink-muted">
               Beyond our current cultivation, Pearl Gro can grow specific
-              crops to meet buyer or investor demand. Have a requirement in
+              crops to meet buyer's demand. Have a requirement in
               mind? Let&rsquo;s talk.
             </p>
 
