@@ -29,15 +29,15 @@ export default function WhyDifferent() {
           </div>
           <ul className="grid grid-cols-1 gap-y-4 sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-4 sm:gap-x-16 sm:gap-y-12">
             {features.map((feature) => (
-              <li key={feature.label} className="flex items-center gap-4 sm:gap-6">
+              <li key={feature.label} className="flex items-center gap-2 sm:gap-6">
                 <Image
                   src={feature.icon}
                   alt=""
                   width={45}
                   height={45}
-                  className="h-8 w-8 shrink-0 sm:h-[45px] sm:w-[45px]"
+                  className="h-6 w-6 shrink-0 sm:h-[45px] sm:w-[45px]"
                 />
-                <span className="text-[16px] leading-[1.4] font-bold tracking-[-0.81px] text-text sm:text-[20px] sm:leading-[1.5]">
+                <span className="text-[14px] leading-[1.3] font-bold tracking-[-0.81px] text-text sm:text-[20px] sm:leading-[1.5]">
                   {feature.label}
                 </span>
               </li>
