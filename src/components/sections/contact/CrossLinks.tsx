@@ -32,7 +32,7 @@ export default function CrossLinks() {
               index > 0 ? "sm:border-l sm:border-glow/8 sm:pl-8" : ""
             }`}
           >
-            <span className="font-mono text-[11px] tracking-[1.98px] text-muted/50 uppercase">
+            <span className="w-[90px] shrink-0 font-mono text-[11px] tracking-[1.98px] text-muted/50 uppercase sm:w-auto">
               {link.eyebrow}
             </span>
             <span className="h-3.5 w-px bg-muted/20" />
