@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/Container";
-
 const features = [
   { icon: "/home/icons/management.svg", label: "Management Excellence" },
   { icon: "/home/icons/technology.svg", label: "Advanced Technology" },
@@ -12,12 +11,11 @@ const features = [
   { icon: "/home/icons/partner.svg", label: "Partner Focused" },
   { icon: "/home/icons/long-term.svg", label: "Long-Term Value" },
 ];
-
 export default function WhyDifferent() {
   return (
-    <section className="flex flex-col items-center justify-center gap-10 bg-bg-deep py-20 lg:min-h-[703px] lg:gap-12 lg:py-16">
+    <section className="flex flex-col items-center justify-center gap-10 bg-bg-deep pt-20 pb-10 sm:py-20 lg:min-h-[703px] lg:gap-12 lg:py-16">
       <Container className="lg:pt-[55px]">
-        <div className="grid grid-cols-1 gap-x-[58px] gap-y-12 lg:grid-cols-[440px_1fr]">
+        <div className="grid grid-cols-1 gap-x-[58px] gap-y-6 lg:gap-y-12 lg:grid-cols-[440px_1fr]">
           <div className="flex flex-col items-start gap-[30px]">
             <h2 className="font-heading text-[clamp(32px,5vw,50px)] leading-[1.1] font-bold tracking-[-0.81px] text-text">
               Why <span className="text-green-2">Pearl Gro</span> Is
@@ -29,18 +27,17 @@ export default function WhyDifferent() {
               lasting value for our partners and the communities we serve.
             </p>
           </div>
-
-          <ul className="grid grid-cols-1 gap-y-8 sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-4 sm:gap-x-16 sm:gap-y-12">
+          <ul className="grid grid-cols-1 gap-y-4 sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-4 sm:gap-x-16 sm:gap-y-12">
             {features.map((feature) => (
-              <li key={feature.label} className="flex items-center gap-6">
+              <li key={feature.label} className="flex items-center gap-2 sm:gap-6">
                 <Image
                   src={feature.icon}
                   alt=""
                   width={45}
                   height={45}
-                  className="shrink-0"
+                  className="h-6 w-6 shrink-0 sm:h-[45px] sm:w-[45px]"
                 />
-                <span className="text-[20px] leading-[1.5] font-bold tracking-[-0.81px] text-text">
+                <span className="text-[14px] leading-[1.3] font-bold tracking-[-0.81px] text-text sm:text-[20px] sm:leading-[1.5]">
                   {feature.label}
                 </span>
               </li>
@@ -48,8 +45,7 @@ export default function WhyDifferent() {
           </ul>
         </div>
       </Container>
-
-      <Container className="pb-6">
+      <Container className="pb-2 sm:pb-6">
         <Link
           href="/why-pearl-gro"
           className="inline-flex items-center gap-2 text-[15px] font-semibold tracking-[0.15px] text-glow transition-opacity hover:opacity-80"
