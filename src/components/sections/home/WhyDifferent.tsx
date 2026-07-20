@@ -15,7 +15,7 @@ const features = [
 
 export default function WhyDifferent() {
   return (
-    <section className="flex flex-col gap-16 bg-bg-deep py-20 lg:min-h-[703px] lg:justify-between lg:gap-0 lg:py-0">
+    <section className="flex flex-col items-center justify-center gap-10 bg-bg-deep py-20 lg:min-h-[703px] lg:gap-12 lg:py-16">
       <Container className="lg:pt-[55px]">
         <div className="grid grid-cols-1 gap-x-[58px] gap-y-12 lg:grid-cols-[440px_1fr]">
           <div className="flex flex-col items-start gap-[30px]">
