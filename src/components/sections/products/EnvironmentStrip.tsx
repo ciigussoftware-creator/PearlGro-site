@@ -4,7 +4,7 @@ import Container from "@/components/Container";
 
 export default function EnvironmentStrip() {
   return (
-    <section className="bg-bg-black py-10 lg:py-[66px]">
+    <section className="bg-bg-black pt-[120px] pb-10 lg:pt-[210px] lg:pb-[66px]">
       <Container>
         <div className="relative isolate min-h-[340px] overflow-hidden rounded-2xl sm:min-h-[280px]">
           <Image

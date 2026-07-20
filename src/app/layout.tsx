@@ -43,6 +43,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} font-body antialiased`}
+        suppressHydrationWarning
       >
         <SiteLoader />
         <Nav />
