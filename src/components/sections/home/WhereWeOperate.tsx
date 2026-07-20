@@ -38,7 +38,7 @@ const locations: Location[] = [
 
 export default function WhereWeOperate() {
   return (
-    <section className="bg-bg-deep pb-16 lg:pb-[78px]">
+    <section className="bg-bg-deep py-16 lg:py-16">
       <Container>
         <h2 className="font-heading text-[clamp(28px,4vw,37.5px)] font-bold tracking-[-0.75px] text-text">
           Where We Operate
