@@ -23,7 +23,7 @@ export default function RoadmapCard({
   return (
     <div className="flex flex-col items-center">
       <div
-        className={`flex size-18 items-center justify-center rounded-full ${
+        className={`flex size-16 items-center justify-center rounded-full ${
           isOpen
             ? "border-2 border-glow bg-bg-deep shadow-[0_0_16px_rgba(47,229,140,0.27)]"
             : "border border-muted/15 bg-[rgba(8,12,9,0.8)] opacity-45"
@@ -44,7 +44,7 @@ export default function RoadmapCard({
       </div>
 
       <div
-        className={`mt-7 flex w-full flex-col items-start rounded-[18px] border-x border-b border-t-2 px-6 pt-[30px] pb-[29px] transition-transform ${
+        className={`mt-4 flex w-full flex-col items-start rounded-[18px] border-x border-b border-t-2 px-5 py-6 transition-transform ${
           isOpen
             ? "border-glow/28 bg-[rgba(12,22,16,0.8)] hover:-translate-y-2 hover:shadow-[0_0_24px_rgba(47,229,140,0.16)]"
             : "border-muted/8 bg-[rgba(8,12,9,0.45)] opacity-40"

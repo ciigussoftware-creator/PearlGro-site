@@ -45,7 +45,7 @@ export default function OpportunityStatCard({
 }: OpportunityStatCardProps) {
   return (
     <div
-      className={`flex flex-col gap-[10px] rounded-[18px] border-x border-b border-t-2 px-[29px] pt-[34px] pb-[33px] ${cardVariantClasses[variant]}`}
+      className={`flex flex-col gap-2 rounded-[18px] border-x border-b border-t-2 px-6 pt-6 pb-[33px] ${cardVariantClasses[variant]}`}
     >
       <div className="flex items-start justify-between gap-2">
         <p

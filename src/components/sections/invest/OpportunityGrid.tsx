@@ -7,16 +7,16 @@ const crops = ["Scotch Bonnet", "Brinjal", "Tomato", "Capsicum", "Cucumber"];
 
 export default function OpportunityGrid() {
   return (
-    <section className="bg-bg-deep py-20 lg:py-[144px]">
+    <section className="bg-bg-deep py-10 lg:py-12">
       <Container>
         <p className="font-mono text-[11px] tracking-[1.98px] text-muted uppercase">
           The Opportunity
         </p>
-        <h2 className="pt-4 font-heading text-[clamp(32px,4.2vw,46.84px)] font-bold tracking-[-1.17px] text-text">
+        <h2 className="pt-3 font-heading text-[clamp(30px,3.5vw,40px)] font-bold tracking-[-1.17px] text-text">
           Malsiripura Project - Phase 1
         </h2>
 
-        <div className="grid grid-cols-1 gap-4 pt-16 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-3 pt-8 sm:grid-cols-2 lg:grid-cols-4">
           <OpportunityStatCard label="Total Project Land" value="42.5 acres">
             <p className="text-[12px] text-muted">
               Malsiripura, North Central Province
@@ -100,11 +100,11 @@ export default function OpportunityGrid() {
           </OpportunityStatCard>
         </div>
 
-        <div className="mt-[60px] max-w-[720px] rounded-2xl border border-glow/10 bg-[rgba(15,28,20,0.5)] px-8 py-9 sm:px-10">
-          <p className="text-[18px] leading-[1.65] text-text">
+        <div className="mt-8 max-w-[720px] rounded-2xl border border-glow/10 bg-[rgba(15,28,20,0.5)] px-7 py-6 sm:px-8">
+          <p className="text-[16px] leading-[1.6] text-text">
             Each investor secures a defined plot within the Malsiripura
             project and earns a share of the income generated from what is
-            cultivated on it — a direct stake in the land, the harvest, and
+            cultivated on it a direct stake in the land, the harvest, and
             the return. Pearl Gro manages everything from construction to
             export.
           </p>

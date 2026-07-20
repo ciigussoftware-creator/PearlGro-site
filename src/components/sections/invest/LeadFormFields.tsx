@@ -13,7 +13,7 @@ const labelClasses =
   "block pb-1.5 font-mono text-[10px] tracking-[1.4px] text-muted uppercase";
 
 const fieldClasses =
-  "w-full rounded-t-[6px] border-b-[1.5px] border-text/15 bg-white/4 px-4 py-3.5 text-[15px] text-text placeholder:text-muted/40 outline-none transition-colors focus:border-glow";
+  "w-full rounded-t-[6px] border-b-[1.5px] border-text/15 bg-white/4 px-4 py-3 text-[15px] text-text placeholder:text-muted/40 outline-none transition-colors focus:border-glow";
 
 export default function LeadFormFields() {
   const [state, formAction, isPending] = useActionState(
@@ -22,8 +22,8 @@ export default function LeadFormFields() {
   );
 
   return (
-    <div className="rounded-3xl border border-glow/22 bg-[rgba(12,22,16,0.75)] p-8 sm:p-[49px]">
-      <form action={formAction} className="flex flex-col gap-7">
+    <div className="rounded-3xl border border-glow/22 bg-[rgba(12,22,16,0.75)] p-7 sm:p-9">
+      <form action={formAction} className="flex flex-col gap-5">
         <div>
           <label htmlFor="fullName" className={labelClasses}>
             Full Name
@@ -109,11 +109,11 @@ export default function LeadFormFields() {
           <button
             type="submit"
             disabled={isPending}
-            className="flex h-[66px] w-full items-center justify-center rounded-full bg-gold text-[17px] font-semibold text-bg-black shadow-[0_0_16px_rgba(232,196,107,0.27)] transition-opacity hover:opacity-90 disabled:opacity-60"
+            className="flex h-[56px] w-full items-center justify-center rounded-full bg-gold text-[16px] font-semibold text-bg-black shadow-[0_0_16px_rgba(232,196,107,0.27)] transition-opacity hover:opacity-90 disabled:opacity-60"
           >
             {isPending ? "Sending…" : "Talk to Our Team"}
           </button>
-          <p className="pt-3.5 text-center font-mono text-[10px] tracking-[1px] text-muted/45">
+          <p className="pt-3 text-center font-mono text-[10px] tracking-[1px] text-muted/45">
             We&rsquo;ll never share your information. A Pearl Gro
             representative typically responds within 2 business days.
           </p>

@@ -35,12 +35,12 @@ const phases = [
 
 export default function RoadAhead() {
   return (
-    <section className="bg-bg-deep py-20 lg:py-[144px]">
+    <section className="bg-bg-deep py-10 lg:py-12">
       <Container>
         <p className="font-mono text-[11px] tracking-[1.98px] text-muted uppercase">
           The Road Ahead
         </p>
-        <h2 className="pt-4 font-heading text-[clamp(32px,4vw,44.5px)] font-bold tracking-[-1.11px] text-text">
+        <h2 className="pt-3 font-heading text-[clamp(32px,4vw,44.5px)] font-bold tracking-[-1.11px] text-text">
           Beyond Phase 1
         </h2>
         <p className="max-w-[560px] pt-3 text-[17px] leading-[1.7] text-muted">
@@ -48,7 +48,7 @@ export default function RoadAhead() {
           phases will open as Phase 1 reaches capacity and delivers returns.
         </p>
 
-        <div className="grid grid-cols-1 gap-x-4 gap-y-16 pt-18 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-x-4 gap-y-10 pt-10 sm:grid-cols-2 lg:grid-cols-4">
           {phases.map((phase) => (
             <RoadmapCard key={phase.phaseNumber} {...phase} />
           ))}

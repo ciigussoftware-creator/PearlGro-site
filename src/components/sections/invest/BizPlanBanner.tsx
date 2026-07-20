@@ -4,7 +4,7 @@ import Container from "@/components/Container";
 
 export default function BizPlanBanner() {
   return (
-    <section className="bg-bg-black py-10 lg:py-0">
+    <section className="bg-bg-black py-10 lg:py-12">
       <Container>
         <div className="flex flex-col items-start gap-8 rounded-[20px] border border-gold/18 bg-[rgba(10,13,9,0.95)] px-8 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-[53px] sm:py-[41px]">
           <div className="flex items-center gap-6">

@@ -21,7 +21,7 @@ export default function LeadForm() {
   return (
     <section
       id="lead-form"
-      className="relative overflow-hidden bg-bg-black py-20 lg:py-[144px]"
+      className="relative overflow-hidden bg-bg-black py-12 lg:py-16"
     >
       <div
         aria-hidden
@@ -40,22 +40,22 @@ export default function LeadForm() {
         }}
       />
 
-      <Container className="relative grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24">
+      <Container className="relative grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
         <div className="flex flex-col items-start">
           <p className="font-mono text-[11px] tracking-[1.98px] text-muted uppercase">
             Phase 1 · 10 Slots Remaining
           </p>
 
-          <h2 className="max-w-[512px] pt-4.5 font-heading text-[clamp(32px,4vw,44.5px)] font-bold tracking-[-1.11px] text-text">
+          <h2 className="max-w-[512px] pt-4 font-heading text-[clamp(32px,4vw,44.5px)] font-bold tracking-[-1.11px] text-text">
             Interested in Phase 1? <span className="text-gold">Get in Touch.</span>
           </h2>
 
-          <p className="max-w-[512px] pt-4.5 text-[17px] leading-[1.72] text-muted">
+          <p className="max-w-[512px] pt-4 text-[17px] leading-[1.72] text-muted">
             Leave your details and a Pearl Gro representative will contact
             you personally - no account, no commitment.
           </p>
 
-          <ul className="flex flex-col gap-5 pt-13">
+          <ul className="flex flex-col gap-4 pt-9">
             {benefits.map((benefit) => (
               <li key={benefit.label} className="flex items-center gap-3.5">
                 <span className="flex size-9 shrink-0 items-center justify-center rounded-[10px] border border-glow/20 bg-glow/8">
@@ -66,8 +66,8 @@ export default function LeadForm() {
             ))}
           </ul>
 
-          <div className="mt-14 w-full rounded-2xl border border-glow/12 bg-[rgba(15,28,20,0.5)] px-[29px] py-[25px]">
-            <p className="font-mono text-[40px] leading-none font-light text-glow">
+          <div className="mt-10 w-full rounded-2xl border border-glow/12 bg-[rgba(15,28,20,0.5)] px-[29px] py-5">
+            <p className="font-mono text-[36px] leading-none font-light text-glow">
               10
             </p>
             <p className="pt-1.5 font-mono text-[10px] tracking-[1.4px] text-muted uppercase">

@@ -27,16 +27,16 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="bg-light-bg py-20 lg:py-[144px]">
+    <section className="bg-light-bg py-16 lg:py-16">
       <Container>
-        <p className="font-mono text-[11px] tracking-[1.98px] text-label uppercase">
+        <p className="font-mono text-[50px] tracking-[1.98px] text-label uppercase font-semibold">
           How It Works
         </p>
-        <h2 className="pt-4 font-heading text-[clamp(28px,3.4vw,32px)] font-bold tracking-[-0.98px] text-ink">
+        <h2 className="pt-4 font-heading text-[clamp(20px,2vw,24px)] font-bold tracking-[-0.98px] text-ink">
           You Invest. We Build, Grow, and Sell.
         </h2>
 
-        <div className="grid grid-cols-1 gap-12 pt-16 sm:grid-cols-3 sm:gap-6">
+        <div className="grid grid-cols-1 gap-12 pt-12 sm:grid-cols-3 sm:gap-6">
           {steps.map((step) => (
             <div key={step.title} className="flex flex-col items-start">
               <div className="flex items-center gap-4">
@@ -59,7 +59,7 @@ export default function HowItWorks() {
           ))}
         </div>
 
-        <div className="mt-16 border-t border-ink/10 pt-12">
+        <div className="mt-16 border-t border-ink/10 pt-8">
           <p className="text-[23px] leading-[1.5] font-semibold tracking-[-0.23px] text-ink">
             You own the stake.{" "}
             <span className="text-ink-accent">
