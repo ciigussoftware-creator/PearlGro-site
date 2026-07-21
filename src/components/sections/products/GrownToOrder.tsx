@@ -63,25 +63,43 @@ export default function GrownToOrder() {
               {specRows.map((row, index) => (
                 <li
                   key={row.label}
-                  className={`flex items-center gap-3.5 py-4 ${
+                  className={`flex items-center py-4 ${
                     index < specRows.length - 1
                       ? "border-b border-ink/7"
                       : ""
                   }`}
                 >
-                  <span className="flex size-6 shrink-0 items-center justify-center rounded-full border border-glow/30 bg-glow/12">
-                    <Image
-                      src="/products/icons/check.svg"
-                      alt=""
-                      width={12}
-                      height={12}
-                    />
+                  {/* Tick */}
+                  <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-[#3a7d5c]">
+                    <svg
+                      width="11"
+                      height="11"
+                      viewBox="0 0 11 11"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2 5.5L4.5 8L9 3"
+                        stroke="white"
+                        strokeWidth="1.6"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
                   </span>
-                  <span className="font-mono text-[10px] tracking-[1.6px] text-label uppercase">
+
+                  {/* Label — shrink-0 so it never wraps, smaller fixed width on mobile */}
+                  <span className="w-[72px] shrink-0 pl-3 font-mono text-[10px] tracking-[1.6px] text-label uppercase sm:w-[90px]">
                     {row.label}
                   </span>
-                  <span className="text-[10px] text-ink/40">—</span>
-                  <span className="text-[14px] font-medium text-ink-accent">
+
+                  {/* Dash — shrink-0 so it stays in column */}
+                  <span className="w-[20px] shrink-0 text-center text-[10px] text-ink/40">
+                    —
+                  </span>
+
+                  {/* Value — min-w-0 allows it to shrink, no wrapping */}
+                  <span className="min-w-0 truncate pl-2 text-[13px] font-medium text-ink-accent sm:text-[14px]">
                     {row.value}
                   </span>
                 </li>
