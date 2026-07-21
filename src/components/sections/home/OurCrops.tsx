@@ -44,30 +44,38 @@ export default function OurCrops() {
         </div>
 
         <div className="grid grid-cols-2 gap-4 pt-14 sm:grid-cols-3 lg:grid-cols-5">
-          {crops.map((crop) => (
-            <div
-              key={crop.name}
-              className="overflow-hidden rounded-2xl bg-card-light"
-            >
-              <div className="relative aspect-square w-full bg-image-bg-light">
-                <Image
-                  src={crop.image}
-                  alt={crop.name}
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 211px, (min-width: 640px) 33vw, 50vw"
-                />
+          {crops.map((crop, index) => {
+            const isLastOdd =
+              crops.length % 2 !== 0 && index === crops.length - 1;
+            return (
+              <div
+                key={crop.name}
+                className={`overflow-hidden rounded-2xl bg-card-light ${
+                  isLastOdd
+                    ? "col-span-2 mx-auto w-[calc(50%-8px)] sm:col-span-1 sm:mx-0 sm:w-full"
+                    : ""
+                }`}
+              >
+                <div className="relative aspect-square w-full bg-image-bg-light">
+                  <Image
+                    src={crop.image}
+                    alt={crop.name}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 211px, (min-width: 640px) 33vw, 50vw"
+                  />
+                </div>
+                <div className="px-[18px] pt-4 pb-[18px]">
+                  <p className="font-mono text-[9px] tracking-[1.35px] text-label uppercase">
+                    {crop.category}
+                  </p>
+                  <p className="pt-1.5 font-heading text-[15px] font-semibold text-ink">
+                    {crop.name}
+                  </p>
+                </div>
               </div>
-              <div className="px-[18px] pt-4 pb-[18px]">
-                <p className="font-mono text-[9px] tracking-[1.35px] text-label uppercase">
-                  {crop.category}
-                </p>
-                <p className="pt-1.5 font-heading text-[15px] font-semibold text-ink">
-                  {crop.name}
-                </p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </Container>
     </section>
