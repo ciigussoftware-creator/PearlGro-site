@@ -23,7 +23,7 @@ export default function GridCropCard({
           : "border-glow/10"
       }`}
     >
-      <div className="relative aspect-[4/3] w-full bg-bg-black">
+      <div className="relative aspect-4/3 w-full bg-bg-black">
         <div
           aria-hidden
           className="absolute inset-0"
@@ -49,7 +49,7 @@ export default function GridCropCard({
       </div>
 
       <div className="bg-[rgba(10,18,14,0.96)] px-4 pt-4 pb-5">
-        <span className="inline-flex items-center gap-1 rounded-full border border-glow/15 bg-glow/8 px-2.5 py-[3px] font-mono text-[8px] tracking-[1px] text-muted uppercase">
+        <span className="inline-flex items-center gap-1 rounded-full border border-glow/15 bg-glow/8 px-2.5 py-0.75 font-mono text-[8px] tracking-[1px] text-muted uppercase">
           {crop.category === "Spice" && (
             <Image src="/products/icons/flame.svg" alt="" width={8} height={8} />
           )}
