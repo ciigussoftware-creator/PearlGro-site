@@ -4,7 +4,7 @@ import Container from "@/components/Container";
 import { useEffect, useRef, useState } from "react";
 
 export default function ProjectPreview() {
-  const YOUTUBE_VIDEO_ID = "e4qBrNKWyAU"; // ✅ just the ID, not the full URL
+  const YOUTUBE_VIDEO_ID = "A5XGrgI-tnw";
 
   const sectionRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
