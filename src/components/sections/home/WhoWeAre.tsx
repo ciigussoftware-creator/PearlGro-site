@@ -55,11 +55,12 @@ export default function WhoWeAre() {
               />
             </div>
 
-            <div className="absolute bottom-8 left-4 w-[220px] rounded-2xl border border-accent bg-bg-deep px-7 py-5 sm:left-[-40px]">
-              <p className="font-mono text-[32px] leading-[32px] font-light text-green-off">
+            <div className="absolute bottom-8 left-2 w-[250px] rounded-2xl border border-accent bg-bg-deep px-6 py-5 sm:left-8 sm:w-[360px] sm:px-8 sm:py-6 lg:left-[-40px] lg:w-[220px] lg:px-7 lg:py-5">
+              <p className="font-mono text-[34px] leading-[34px] font-light text-green-off sm:text-[42px] sm:leading-[42px] lg:text-[32px] lg:leading-[32px]">
                 100%
               </p>
-              <p className="pt-1.5 text-[10px] tracking-[1.4px] text-muted uppercase">
+
+              <p className="pt-2 text-[10px] tracking-[1.4px] text-muted uppercase sm:text-[12px] sm:tracking-[1.5px] lg:pt-1.5 lg:text-[10px] lg:tracking-[1.4px]">
                 Controlled Environment
               </p>
             </div>
