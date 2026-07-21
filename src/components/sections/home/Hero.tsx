@@ -39,7 +39,7 @@ export default function Hero() {
         />
       </div>
 
-      <Container className="relative flex flex-col items-start pt-24 lg:pt-30 lg:pb-40">
+      <Container className="relative flex flex-col items-start pt-24 lg:pt-12 lg:pb-40">
         <p className="font-mono text-[11px] tracking-[1.98px] text-muted uppercase">
           Sri Lanka · Controlled-Environment Agriculture
         </p>
@@ -56,14 +56,10 @@ export default function Hero() {
           renewable energy, and expert agricultural management.
         </p>
 
-        <Button href="/invest" size="lg" className="mt-12">
+        <Button href="/invest" size="lg" className="mt-12 md:mb-10">
           Explore the Investment Opportunities
         </Button>
 
-        <div
-          aria-hidden
-          className="mt-16 hidden h-12 w-px bg-linear-to-b from-glow to-transparent opacity-50 lg:block"
-        />
 
         <div className="mx-auto mt-28 w-full max-w-135 rounded-t-[20px] border border-accent bg-[rgba(10,20,16,0.62)] px-6 py-7 sm:px-10 lg:absolute lg:inset-x-0 lg:bottom-0 lg:mt-0 lg:w-135">
           <div className="grid grid-cols-2 gap-x-10 gap-y-6 sm:grid-cols-4 sm:gap-x-0">
