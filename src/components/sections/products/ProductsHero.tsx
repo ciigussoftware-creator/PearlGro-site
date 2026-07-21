@@ -29,7 +29,7 @@ export default function ProductsHero() {
         />
         <div
           aria-hidden
-          className="absolute -top-16 -left-10 h-[360px] w-[500px]"
+          className="absolute -top-16 -left-10 h-90 w-125"
           style={{
             background:
               "radial-gradient(ellipse at center, rgba(47,229,140,0.07) 0%, rgba(0,0,0,0) 70%)",
@@ -37,16 +37,16 @@ export default function ProductsHero() {
         />
       </div>
 
-      <Container className="relative flex flex-col items-start py-24 lg:py-[130px]">
+      <Container className="relative flex min-h-screen flex-col items-start justify-end py-24 lg:py-32.5">
         <p className="font-mono text-[11px] tracking-[1.98px] text-muted uppercase">
           Phase 1 Cultivation · Controlled Environment
         </p>
 
-        <h1 className="max-w-[600px] pt-5 font-heading text-[clamp(40px,6vw,80px)] leading-[1.02] font-bold tracking-tight text-text">
+        <h1 className="max-w-150 pt-5 font-heading text-[clamp(40px,6vw,80px)] leading-[1.02] font-bold tracking-tight text-text">
           What We Grow
         </h1>
 
-        <p className="max-w-[540px] pt-6 text-[17px] leading-[1.7] text-muted">
+        <p className="max-w-135 pt-6 text-[17px] leading-[1.7] text-muted">
           Pearl Gro cultivates high-demand crops for export, grown in
           controlled-environment greenhouses to consistent quality standards.
         </p>

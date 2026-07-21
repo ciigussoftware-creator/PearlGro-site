@@ -22,12 +22,12 @@ export default function WhyHero() {
         />
       </div>
 
-      <Container className="relative flex flex-col items-start pt-24 pb-24 lg:pt-30 lg:pb-32">
+      <Container className="relative flex min-h-screen flex-col items-start justify-end pt-24 pb-24 lg:pt-30 lg:pb-32">
         <p className="font-mono text-[11px] tracking-[1.98px] text-muted uppercase">
           Our Model
         </p>
 
-        <h1 className="max-w-[600px] pt-7 font-heading text-[clamp(40px,6vw,72px)] leading-[1.05] font-bold tracking-[-1.5px] text-text">
+        <h1 className="max-w-150 pt-7 font-heading text-[clamp(40px,6vw,72px)] leading-[1.05] font-bold tracking-[-1.5px] text-text">
           Why Pearl Gro
         </h1>
 
@@ -39,7 +39,7 @@ export default function WhyHero() {
         <div className="mt-8 flex items-center gap-4">
           <span
             aria-hidden
-            className="h-px w-[99px] bg-gradient-to-r from-glow to-glow/20"
+            className="h-px w-24.75 bg-linear-to-r from-glow to-glow/20"
           />
           <span className="font-mono text-[10px] tracking-[1.5px] text-glow/50 uppercase">
             Management &middot; Technology &middot; Knowledge

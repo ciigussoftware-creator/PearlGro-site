@@ -111,7 +111,7 @@ export default function SeedToShelf() {
   );
 
   return (
-    <section id="seed-to-shelf" className="bg-bg-black pt-10 pb-20 lg:pt-16 lg:pb-[144px]">
+    <section id="seed-to-shelf" className="bg-bg-black pt-10 pb-20 lg:pt-16 lg:pb-36">
       <Container>
         <p className="font-mono text-[9px] tracking-[1.5px] text-muted uppercase">
           05 · The Lifecycle
@@ -124,7 +124,7 @@ export default function SeedToShelf() {
           <div className="absolute top-2 bottom-2 left-3 w-px overflow-hidden rounded-full bg-glow/12 sm:left-4">
             <div
               data-timeline-fill
-              className="h-full w-full origin-top bg-gradient-to-b from-glow to-glow/30 shadow-[0_0_8px_rgba(47,229,140,0.3)]"
+              className="h-full w-full origin-top bg-linear-to-b from-glow to-glow/30 shadow-[0_0_8px_rgba(47,229,140,0.3)]"
             />
           </div>
 
@@ -150,13 +150,13 @@ export default function SeedToShelf() {
                       <h3 className="pt-3 font-heading text-[26px] font-bold tracking-[-0.4px] text-text">
                         {stage.title}
                       </h3>
-                      <p className="max-w-[500px] pt-3 text-[14px] leading-[1.75] text-muted">
+                      <p className="max-w-125 pt-3 text-[14px] leading-[1.75] text-muted">
                         {stage.description}
                       </p>
                     </div>
 
                     <div
-                      className={`aspect-[4/3] overflow-hidden rounded-2xl border border-glow/10 bg-bg-deep ${
+                      className={`aspect-4/3 overflow-hidden rounded-2xl border border-glow/10 bg-bg-deep ${
                         visualFirst ? "lg:order-1" : "lg:order-2"
                       }`}
                     >

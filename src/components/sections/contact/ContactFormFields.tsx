@@ -16,7 +16,7 @@ export default function ContactFormFields() {
   );
 
   return (
-    <div className="rounded-3xl border border-glow/18 bg-[rgba(14,26,19,0.7)] p-8 sm:p-[49px]">
+    <div className="rounded-3xl border border-glow/18 bg-[rgba(14,26,19,0.7)] p-8 sm:p-10">
       <form action={formAction} className="flex flex-col gap-7">
         <div>
           <label htmlFor="name" className={labelClasses}>
@@ -81,7 +81,7 @@ export default function ContactFormFields() {
           <button
             type="submit"
             disabled={isPending}
-            className="flex h-[52px] w-full items-center justify-center rounded-full bg-accent text-[15px] font-semibold text-accent-ink shadow-[0_0_16px_rgba(186,227,32,0.25)] transition-colors hover:bg-accent-hover disabled:opacity-60"
+            className="flex h-13 w-full items-center justify-center rounded-full bg-accent text-[15px] font-semibold text-accent-ink shadow-[0_0_16px_rgba(186,227,32,0.25)] transition-colors hover:bg-accent-hover disabled:opacity-60"
           >
             {isPending ? "Sending…" : "Send Message"}
           </button>

@@ -144,7 +144,7 @@ export default function SiteLoader() {
       ref={overlayRef}
       role="status"
       aria-live="polite"
-      className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-bg-black"
+      className="fixed inset-0 z-100 flex flex-col items-center justify-center bg-bg-black"
     >
       <span className="sr-only">Loading Pearl Gro</span>
 

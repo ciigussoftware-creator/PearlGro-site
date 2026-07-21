@@ -27,12 +27,12 @@ const nodes: Node[] = [
 
 export default function VerticalIntegration() {
   return (
-    <section className="bg-light-bg py-20 lg:py-[144px]">
+    <section className="bg-light-bg py-20 lg:py-36">
       <Container>
         <h2 className="font-heading text-[clamp(32px,4.2vw,46.84px)] font-bold tracking-[-1.17px] text-ink">
           We Build It. We Grow It. We Sell It.
         </h2>
-        <p className="max-w-[560px] pt-6 text-[15px] leading-[1.75] text-ink-muted">
+        <p className="max-w-140 pt-6 text-[15px] leading-[1.75] text-ink-muted">
           Pearl Gro constructs the infrastructure, cultivates the crops, AND
           secures the export buyer — removing the biggest uncertainty in
           agricultural investment: who will actually buy this? We answer that
@@ -42,7 +42,7 @@ export default function VerticalIntegration() {
         <div className="relative mt-16 grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-6">
           <span
             aria-hidden
-            className="absolute top-[26px] right-[10%] left-[10%] hidden h-px bg-gradient-to-r from-ink-accent/25 via-ink-accent/45 to-ink-accent/25 sm:block"
+            className="absolute top-6.5 right-[10%] left-[10%] hidden h-px bg-linear-to-r from-ink-accent/25 via-ink-accent/45 to-ink-accent/25 sm:block"
           />
 
           {nodes.map((node, i) => {
@@ -51,9 +51,9 @@ export default function VerticalIntegration() {
               <div key={node.title} className="relative flex flex-col items-start">
                 <div className="flex items-center gap-3">
                   <div
-                    className={`relative flex size-[53px] shrink-0 items-center justify-center rounded-full ${
+                    className={`relative flex size-13.25 shrink-0 items-center justify-center rounded-full ${
                       isLast
-                        ? "border border-glow bg-bg-deep shadow-[0_0_18px_rgba(47,229,140,0.33)]"
+                        ? "border border-accent bg-bg-deep shadow-[0_0_18px_rgba(47,229,140,0.33)]"
                         : "border border-ink-accent bg-[#ede9e0]"
                     }`}
                   >
