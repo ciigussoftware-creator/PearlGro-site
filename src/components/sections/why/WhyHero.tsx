@@ -22,12 +22,12 @@ export default function WhyHero() {
         />
       </div>
 
-      <Container className="relative flex flex-col items-start pt-24 pb-24 lg:pt-30 lg:pb-32">
+      <Container className="relative flex min-h-screen flex-col items-start justify-end pt-24 pb-24 lg:pt-30 lg:pb-32">
         <p className="font-mono text-[11px] tracking-[1.98px] text-muted uppercase">
           Our Model
         </p>
 
-        <h1 className="max-w-[600px] pt-7 font-heading text-[clamp(40px,6vw,72px)] leading-[1.05] font-bold tracking-[-1.5px] text-text">
+        <h1 className="max-w-150 pt-7 font-heading text-[clamp(40px,6vw,72px)] leading-[1.05] font-bold tracking-[-1.5px] text-text">
           Why Pearl Gro
         </h1>
 
