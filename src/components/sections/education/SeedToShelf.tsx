@@ -111,7 +111,7 @@ export default function SeedToShelf() {
   );
 
   return (
-    <section id="seed-to-shelf" className="bg-bg-black py-20 lg:py-[144px]">
+    <section id="seed-to-shelf" className="bg-bg-black pt-10 pb-20 lg:pt-16 lg:pb-[144px]">
       <Container>
         <p className="font-mono text-[9px] tracking-[1.5px] text-muted uppercase">
           05 · The Lifecycle

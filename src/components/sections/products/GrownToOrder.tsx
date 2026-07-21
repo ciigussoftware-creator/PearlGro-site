@@ -39,7 +39,7 @@ export default function GrownToOrder() {
             </Link>
           </div>
 
-          <div className="rounded-2xl border border-ink-accent/15 bg-[rgba(246,245,240,0.95)] px-8 py-8 shadow-[0_8px_40px_rgba(13,33,24,0.08)] sm:px-9">
+          <div className="rounded-2xl border border-ink-accent/15 bg-[rgba(246,245,240,0.95)] px-6 py-6 shadow-[0_8px_40px_rgba(13,33,24,0.08)] sm:px-9 sm:py-8">
             <div className="flex items-center justify-between border-b border-ink-accent/10 pb-5">
               <div>
                 <p className="font-mono text-[9px] tracking-[1.6px] text-label uppercase">

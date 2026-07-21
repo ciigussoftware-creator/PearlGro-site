@@ -10,7 +10,7 @@ const points = [
 
 export default function SolarSection() {
   return (
-    <section id="solar" className="bg-bg-black py-20 lg:py-[144px]">
+    <section id="solar" className="bg-bg-black pt-20 pb-10 lg:pt-[144px] lg:pb-16">
       <Container>
         <SectionHeading
           number="04"
