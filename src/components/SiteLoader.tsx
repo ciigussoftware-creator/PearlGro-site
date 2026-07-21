@@ -1,12 +1,19 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { useGSAP } from "@gsap/react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { gsap } from "@/lib/gsap";
 import SproutMark from "@/components/SproutMark";
 
 const LOADING_PHRASES = ["PREPARING THE GROUND", "CULTIVATING", "ALMOST READY"];
-const PROGRESS_DURATION = 1.8;
+
+function getPhrase(progress: number): string {
+  if (progress < 40) return LOADING_PHRASES[0];
+  if (progress < 75) return LOADING_PHRASES[1];
+  return LOADING_PHRASES[2];
+}
+
+/** Max time (ms) before force-completing the loader. */
+const SAFETY_TIMEOUT = 10_000;
 
 export default function SiteLoader() {
   const [isVisible, setIsVisible] = useState(true);
@@ -14,56 +21,121 @@ export default function SiteLoader() {
   const fillRef = useRef<HTMLDivElement>(null);
   const percentRef = useRef<HTMLParagraphElement>(null);
   const copyRef = useRef<HTMLParagraphElement>(null);
+  const currentProgress = useRef(0);
+  const activeTween = useRef<gsap.core.Tween | null>(null);
+  const hasCompleted = useRef(false);
 
+  /* Lock scroll while visible */
   useEffect(() => {
     if (!isVisible) return;
-    const originalOverflow = document.body.style.overflow;
+    const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {
-      document.body.style.overflow = originalOverflow;
+      document.body.style.overflow = prev;
     };
   }, [isVisible]);
 
-  useGSAP(
-    () => {
-      const overlay = overlayRef.current;
-      const fill = fillRef.current;
-      const percent = percentRef.current;
-      const copy = copyRef.current;
-      if (!overlay || !fill || !percent || !copy) return;
+  /** Smoothly animate progress bar to `target` (0–100). Never goes backwards. */
+  const animateTo = useCallback((target: number) => {
+    const fill = fillRef.current;
+    const percent = percentRef.current;
+    const copy = copyRef.current;
+    if (!fill || !percent || !copy) return;
+    if (target <= currentProgress.current) return;
 
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    activeTween.current?.kill();
+
+    const obj = { v: currentProgress.current };
+    activeTween.current = gsap.to(obj, {
+      v: target,
+      duration: Math.max(0.3, (target - currentProgress.current) / 120),
+      ease: "power2.out",
+      onUpdate: () => {
+        currentProgress.current = obj.v;
+        fill.style.width = `${obj.v}%`;
+        percent.textContent = `${Math.round(obj.v)}%`;
+        copy.textContent = getPhrase(obj.v);
+      },
+    });
+  }, []);
+
+  /** Finish the loader: animate to 100 %, pause briefly, then fade out. */
+  const complete = useCallback(() => {
+    if (hasCompleted.current) return;
+    hasCompleted.current = true;
+    const overlay = overlayRef.current;
+
+    animateTo(100);
+
+    /* Small delay so the user sees "100 %" before the fade */
+    setTimeout(() => {
+      if (!overlay) {
         setIsVisible(false);
         return;
       }
-
-      const progress = { value: 0 };
-      const tl = gsap.timeline({ onComplete: () => setIsVisible(false) });
-
-      tl.to(progress, {
-        value: 100,
-        duration: PROGRESS_DURATION,
-        ease: "power1.inOut",
-        onUpdate: () => {
-          fill.style.width = `${progress.value}%`;
-          percent.textContent = `${Math.round(progress.value)}%`;
-        },
+      gsap.to(overlay, {
+        opacity: 0,
+        duration: 0.6,
+        ease: "power2.inOut",
+        onComplete: () => setIsVisible(false),
       });
+    }, 500);
+  }, [animateTo]);
 
-      LOADING_PHRASES.forEach((phrase, index) => {
-        const time = (index / LOADING_PHRASES.length) * PROGRESS_DURATION;
-        tl.call(() => { copy.textContent = phrase; }, undefined, time).fromTo(
-          copy,
-          { opacity: 0, y: 4 },
-          { opacity: 1, y: 0, duration: 0.3 },
-          time,
-        );
-      });
+  useEffect(() => {
+    if (!isVisible) return;
 
-      tl.to(overlay, { opacity: 0, duration: 0.6, ease: "power2.inOut" }, "+=0.3");
-    },
-    { scope: overlayRef },
-  );
+    /* Skip for reduced-motion users */
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setIsVisible(false);
+      return;
+    }
+
+    /* If page already fully loaded (e.g. HMR refresh), complete immediately */
+    if (document.readyState === "complete") {
+      complete();
+      return;
+    }
+
+    /* ---------- Phase 1: initial bump ---------- */
+    animateTo(10);
+
+    /* ---------- Phase 2: readyState milestones ---------- */
+    const onReadyStateChange = () => {
+      if (document.readyState === "interactive") animateTo(35);
+      if (document.readyState === "complete") animateTo(80);
+    };
+    document.addEventListener("readystatechange", onReadyStateChange);
+
+    /* ---------- Phase 3: track image loading ---------- */
+    let imageInterval: ReturnType<typeof setInterval> | null = null;
+
+    const trackImages = () => {
+      const images = Array.from(document.images);
+      if (images.length === 0) return;
+
+      const loaded = images.filter((img) => img.complete).length;
+      /* Map image completion into the 35 – 85 % range */
+      const imagePct = 35 + (loaded / images.length) * 50;
+      animateTo(Math.min(imagePct, 85));
+    };
+
+    imageInterval = setInterval(trackImages, 150);
+
+    /* ---------- Phase 4: window load = everything done ---------- */
+    const onLoad = () => complete();
+    window.addEventListener("load", onLoad);
+
+    /* ---------- Safety: force-complete after timeout ---------- */
+    const safety = setTimeout(complete, SAFETY_TIMEOUT);
+
+    return () => {
+      document.removeEventListener("readystatechange", onReadyStateChange);
+      window.removeEventListener("load", onLoad);
+      if (imageInterval) clearInterval(imageInterval);
+      clearTimeout(safety);
+    };
+  }, [isVisible, animateTo, complete]);
 
   if (!isVisible) return null;
 
