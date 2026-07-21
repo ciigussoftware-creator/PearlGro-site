@@ -53,22 +53,22 @@ export default function EducationHero() {
 
         <nav
           aria-label="Education page sections"
-          className="mt-11 inline-flex max-w-full flex-wrap items-center gap-x-1 gap-y-2 rounded-full border border-glow/15 bg-bg-black/50 px-5 py-2"
+          className="mt-11 inline-flex max-w-full flex-wrap items-center gap-x-1 gap-y-2 rounded-2xl border border-glow/15 bg-bg-black/50 px-5 py-2 lg:rounded-full"
         >
           {contentsLinks.map((link, index) => (
             <span key={link.href} className="flex items-center">
-              {index > 0 && (
-                <span
-                  aria-hidden
-                  className="mx-4 h-[10px] w-px bg-glow/20"
-                />
-              )}
               <Link
                 href={link.href}
                 className="inline-flex min-h-[44px] items-center font-mono text-[10px] tracking-[1.3px] text-muted uppercase transition-colors hover:text-glow"
               >
                 {link.label}
               </Link>
+              {index < contentsLinks.length - 1 && (
+                <span
+                  aria-hidden
+                  className="mx-4 h-[10px] w-px bg-glow/20"
+                />
+              )}
             </span>
           ))}
         </nav>

@@ -127,7 +127,7 @@ export default function ComparisonTable() {
           Ownership You Can See
         </h2>
 
-        <div className="mt-14 overflow-hidden rounded-2xl border border-text/6">
+        <div className="mt-14 hidden overflow-hidden rounded-2xl border border-text/6 lg:block">
           <div className="grid grid-cols-[1.3fr_1fr_1fr_1.15fr]">
             <div className="border-b border-text/7 bg-[rgba(10,18,13,0.8)]" />
             <div className="border-b border-text/7 bg-[rgba(10,18,13,0.8)] px-5 py-6">
@@ -159,6 +159,12 @@ export default function ComparisonTable() {
             <div className="h-[3px] rounded-b-[3px] border-x border-b border-glow/25 bg-gradient-to-r from-glow/40 to-glow/15" />
           </div>
         </div>
+
+        <div className="mt-14 flex flex-col gap-4 lg:hidden">
+          {rows.map((row) => (
+            <ComparisonCard key={row.label} row={row} />
+          ))}
+        </div>
       </Container>
     </section>
   );
@@ -180,5 +186,61 @@ function RowCells({ row }: { row: Row }) {
         <Cell value={row.pearlGro} emphasized />
       </div>
     </>
+  );
+}
+
+function ComparisonCard({ row }: { row: Row }) {
+  return (
+    <div className="overflow-hidden rounded-2xl border border-text/6">
+      <div className="border-b border-text/7 bg-[rgba(10,18,13,0.8)] px-5 py-4">
+        <span className="text-[14px] font-semibold text-text">{row.label}</span>
+      </div>
+      <div className="divide-y divide-text/5">
+        <ComparisonCardRow label="Stocks / Mutual Funds" value={row.stocks} />
+        <ComparisonCardRow label="Buying Land Alone" value={row.land} />
+        <ComparisonCardRow label="Pearl Gro" value={row.pearlGro} emphasized />
+      </div>
+      <div className="h-[3px] bg-gradient-to-r from-glow/40 to-glow/15" />
+    </div>
+  );
+}
+
+function ComparisonCardRow({
+  label,
+  value,
+  emphasized,
+}: {
+  label: string;
+  value: CellValue;
+  emphasized?: boolean;
+}) {
+  return (
+    <div
+      className={
+        emphasized
+          ? "border-x border-glow/25 bg-[rgba(12,30,18,0.9)] px-5 py-4 shadow-[inset_0_0_33px_rgba(47,229,140,0.04)]"
+          : "px-5 py-4"
+      }
+    >
+      {emphasized ? (
+        <span className="inline-flex rounded-full border border-glow/30 bg-glow/12 px-2.5 py-0.5 font-mono text-[8px] tracking-[1.2px] text-glow uppercase">
+          {label}
+        </span>
+      ) : (
+        <p className="font-mono text-[9px] tracking-[1.1px] text-muted/55 uppercase">{label}</p>
+      )}
+      <div className="mt-2 flex items-start gap-2">
+        <CellIcon type={value.type} />
+        <span
+          className={
+            emphasized
+              ? "text-[12px] leading-[1.4] font-semibold text-text/90"
+              : "text-[12px] leading-[1.4] text-muted/70"
+          }
+        >
+          {value.label}
+        </span>
+      </div>
+    </div>
   );
 }
