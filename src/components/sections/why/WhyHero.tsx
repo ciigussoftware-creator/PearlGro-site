@@ -22,7 +22,7 @@ export default function WhyHero() {
         />
       </div>
 
-      <Container className="relative flex min-h-screen flex-col items-start justify-center pt-24 pb-24 lg:pt-30 lg:pb-32">
+      <Container className="relative flex min-h-[110vh] flex-col items-start justify-center pt-16 pb-48 lg:pt-20 lg:pb-64">
         <p className="font-mono text-[11px] tracking-[1.98px] text-muted uppercase">
           Our Model
         </p>

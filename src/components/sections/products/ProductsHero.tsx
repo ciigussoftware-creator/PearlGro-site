@@ -37,7 +37,7 @@ export default function ProductsHero() {
         />
       </div>
 
-      <Container className="relative flex min-h-screen flex-col items-start justify-end py-24 lg:py-32.5">
+      <Container className="relative flex min-h-[110vh] flex-col items-start justify-center pt-16 pb-48 lg:pt-20 lg:pb-64">
         <p className="font-mono text-[11px] tracking-[1.98px] text-muted uppercase">
           Phase 1 Cultivation · Controlled Environment
         </p>
