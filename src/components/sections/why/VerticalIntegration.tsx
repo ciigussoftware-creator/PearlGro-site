@@ -4,24 +4,28 @@ import Container from "@/components/Container";
 interface Node {
   icon: string;
   title: string;
-  description: string;
+  descriptionLine1: string;
+  descriptionLine2: string;
 }
 
 const nodes: Node[] = [
   {
     icon: "/why-pearl-gro/icons/infrastructure.svg",
     title: "Infrastructure",
-    description: "Greenhouse construction, climate systems, renewable energy",
+    descriptionLine1: "Greenhouse construction, climate systems,",
+    descriptionLine2: "renewable energy",
   },
   {
     icon: "/why-pearl-gro/icons/cultivation.svg",
     title: "Cultivation",
-    description: "Expert agronomic management from seeding to harvest",
+    descriptionLine1: "Expert agronomic management",
+    descriptionLine2: "from seeding to harvest",
   },
   {
     icon: "/why-pearl-gro/icons/export-buyer.svg",
     title: "Export Buyer",
-    description: "Buyers secured before harvest — demand confirmed first",
+    descriptionLine1: "Buyers secured before harvest -",
+    descriptionLine2: "demand confirmed first",
   },
 ];
 
@@ -40,16 +44,18 @@ export default function VerticalIntegration() {
         </p>
 
         <div className="relative mt-16 grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-6">
-          <span
-            aria-hidden
-            className="absolute top-6.5 right-[10%] left-[10%] hidden h-px bg-linear-to-r from-ink-accent/25 via-ink-accent/45 to-ink-accent/25 sm:block"
-          />
-
           {nodes.map((node, i) => {
             const isLast = i === nodes.length - 1;
             return (
               <div key={node.title} className="relative flex flex-col items-start">
-                <div className="flex items-center gap-3">
+                {!isLast && (
+                  <span
+                    aria-hidden
+                    className="absolute top-6.5 -right-6 left-13.25 hidden h-px bg-linear-to-r from-ink-accent/25 via-ink-accent/45 to-ink-accent/25 sm:block"
+                  />
+                )}
+
+                <div className="relative flex items-center gap-3">
                   <div
                     className={`relative flex size-13.25 shrink-0 items-center justify-center rounded-full ${
                       isLast
@@ -61,7 +67,7 @@ export default function VerticalIntegration() {
                   </div>
 
                   {isLast && (
-                    <span className="rounded-full border border-glow/30 bg-glow/12 px-3 py-1 font-mono text-[9px] tracking-[1.2px] text-glow uppercase">
+                    <span className="absolute top-1/2 left-[calc(100%+3rem)] w-40 -translate-y-1/2 rounded-2xl border border-glow/30 bg-glow/12 px-3 py-1.5 font-mono text-[9px] leading-[1.5] tracking-[1.2px] text-glow uppercase">
                       Buyer Secured Before Harvest
                     </span>
                   )}
@@ -71,7 +77,9 @@ export default function VerticalIntegration() {
                   {node.title}
                 </h3>
                 <p className="pt-2 text-[13px] leading-[1.7] text-ink-muted">
-                  {node.description}
+                  {node.descriptionLine1}
+                  <br />
+                  {node.descriptionLine2}
                 </p>
               </div>
             );
