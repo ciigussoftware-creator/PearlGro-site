@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import { gsap } from "@/lib/gsap";
-import SproutMark from "@/components/SproutMark";
+import Image from "next/image";
 
 const LOADING_PHRASES = ["PREPARING THE GROUND", "CULTIVATING", "ALMOST READY"];
 
@@ -18,12 +18,31 @@ const SAFETY_TIMEOUT = 10_000;
 export default function SiteLoader() {
   const [isVisible, setIsVisible] = useState(true);
   const overlayRef = useRef<HTMLDivElement>(null);
+  const logoRef = useRef<HTMLDivElement>(null);
   const fillRef = useRef<HTMLDivElement>(null);
   const percentRef = useRef<HTMLParagraphElement>(null);
   const copyRef = useRef<HTMLParagraphElement>(null);
   const currentProgress = useRef(0);
   const activeTween = useRef<gsap.core.Tween | null>(null);
   const hasCompleted = useRef(false);
+
+  /* Gentle breathing animation on the logo */
+  useEffect(() => {
+    const el = logoRef.current;
+    if (!el || !isVisible) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const tween = gsap.to(el, {
+      scale: 1.06,
+      filter: "drop-shadow(0 0 28px rgba(47,229,140,0.5))",
+      duration: 1.4,
+      ease: "sine.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
+
+    return () => { tween.kill(); };
+  }, [isVisible]);
 
   /* Lock scroll while visible */
   useEffect(() => {
@@ -148,7 +167,15 @@ export default function SiteLoader() {
     >
       <span className="sr-only">Loading Pearl Gro</span>
 
-      <SproutMark size={96} />
+      <div ref={logoRef} className="drop-shadow-[0_0_20px_rgba(47,229,140,0.3)]">
+        <Image
+          src="/brand/logo-loader.png"
+          alt="Pearl Gro"
+          width={96}
+          height={124}
+          priority
+        />
+      </div>
 
       <p className="pt-8 font-heading text-[26px] font-bold tracking-[7.82px] text-text opacity-[0.92]">
         PEARL GRO
