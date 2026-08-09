@@ -88,7 +88,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-4 pt-5">
               <li className="flex items-start gap-2.5">
                 <Image
-                  src="/icons/phone.svg"
+                  src="/icons/whatsapp.svg"
                   alt=""
                   width={13}
                   height={13}
