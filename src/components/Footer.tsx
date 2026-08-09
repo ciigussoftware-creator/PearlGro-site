@@ -95,7 +95,7 @@ export default function Footer() {
                   className="mt-0.5"
                 />
                 <span className="text-[14px] leading-5.25 text-muted">
-                  +164 720 35541
+                  +94 77 567 8682
                 </span>
               </li>
               <li className="flex items-start gap-2.5">
@@ -144,7 +144,7 @@ export default function Footer() {
 
         <div className="mt-20 flex flex-col items-center justify-between gap-4 border-t border-text/6 py-8 sm:flex-row">
           <p className="font-mono text-[11px] leading-[16.5px] text-muted/50">
-            © 2025 Pearl Gro. All rights reserved.
+            © 2026 Pearl Gro. All rights reserved.
           </p>
           <ul className="flex flex-wrap gap-6">
             {legalLinks.map((label) => (
