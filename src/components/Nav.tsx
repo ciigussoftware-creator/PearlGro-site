@@ -13,6 +13,8 @@ const navLinks: NavLink[] = [
   { label: "Products", href: "/products" },
   { label: "Education", href: "/education" },
   { label: "Gallery", href: "/gallery" },
+  { label: "Careers", href: "/careers" },
+  { label: "Partners", href: "/partners" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -35,6 +37,45 @@ export default function Nav() {
 
   return (
     <>
+      {/* Top utility bar */}
+      <div className="border-b border-text/6 bg-bg-black">
+        <Container>
+          <div className="flex items-center justify-end gap-6 py-2">
+            <a
+              href="https://wa.me/16472035541"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-[11px] tracking-[0.5px] text-muted transition-colors hover:text-text"
+            >
+              <Image
+                src="/icons/whatsapp.svg"
+                alt=""
+                width={14}
+                height={14}
+              />
+              +1 (647) 203-5541
+            </a>
+
+            <span className="h-3 w-px bg-text/10" />
+
+            <a
+              href="https://maps.google.com/?q=Malsiripura,Kurunegala,Sri+Lanka"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-[11px] tracking-[0.5px] text-muted transition-colors hover:text-text"
+            >
+              <Image
+                src="/icons/location.svg"
+                alt=""
+                width={12}
+                height={12}
+              />
+              Find us on Map
+            </a>
+          </div>
+        </Container>
+      </div>
+
       <header className="sticky top-0 z-50 w-full border-b border-text/6 bg-bg-black/80 backdrop-blur-xl">
         <Container>
           <nav aria-label="Main navigation" className="flex items-center justify-between gap-x-10 py-4">
@@ -42,7 +83,7 @@ export default function Nav() {
             {/* Logo */}
             <Link href="/" aria-label="Pearl Gro home" className="flex shrink-0 items-center">
               <Image
-                src="/brand/logo-nav.png"
+                src="/brand/pearlgroLogo.png"
                 alt="Pearl Gro"
                 width={91}
                 height={44}
