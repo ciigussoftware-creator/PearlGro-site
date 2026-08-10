@@ -15,7 +15,7 @@ const pillars: Pillar[] = [
     title: "Management",
     description:
       "Pearl Gro manages every stage of the project, from preparing the land and cultivating the crops to packing and export. Close supervision throughout the process helps maintain quality and keep operations running smoothly.",
-    image: "/why-pearl-gro/pillar-management.jpg",
+    image: "/why-pearl-gro/pillar-management v2.png",
     alt: "Aerial view of agricultural land development",
   },
   {
@@ -23,7 +23,7 @@ const pillars: Pillar[] = [
     title: "Technology",
     description:
       "Greenhouse technology provides stable growing conditions throughout the year. Controlled irrigation, climate management, and renewable energy help protect crops from changing weather and maintain consistent quality.",
-    image: "/why-pearl-gro/pillar-technology.jpg",
+    image: "/why-pearl-gro/pillar-technology v2.png",
     alt: "Greenhouse interior with LED grow lighting system",
   },
   {
@@ -31,7 +31,7 @@ const pillars: Pillar[] = [
     title: "Knowledge",
     description:
       "Practical farming experience and agricultural knowledge guide each decision. This includes selecting suitable crops, preparing the soil, managing irrigation, choosing the right harvest time, and checking produce for export quality.",
-    image: "/why-pearl-gro/pillar-knowledge.jpg",
+    image: "/why-pearl-gro/pillar-knowledge v2.png",
     alt: "Macro close-up of fresh export-grade tomatoes",
   },
 ];
