@@ -14,7 +14,7 @@ const pillars: Pillar[] = [
     index: "01",
     title: "Management",
     description:
-      "Experienced oversight of every phase of the project, from land development through cultivation to export. Nothing is left to chance or outsourced accountability — Pearl Gro leads every stage directly.",
+      "Pearl Gro manages every stage of the project, from preparing the land and cultivating the crops to packing and export. Close supervision throughout the process helps maintain quality and keep operations running smoothly.",
     image: "/why-pearl-gro/pillar-management.jpg",
     alt: "Aerial view of agricultural land development",
   },
@@ -22,7 +22,7 @@ const pillars: Pillar[] = [
     index: "02",
     title: "Technology",
     description:
-      "Controlled-environment greenhouse cultivation with renewable energy integration, isolating crops from climate volatility and delivering consistent quality regardless of external conditions.",
+      "Greenhouse technology provides stable growing conditions throughout the year. Controlled irrigation, climate management, and renewable energy help protect crops from changing weather and maintain consistent quality.",
     image: "/why-pearl-gro/pillar-technology.jpg",
     alt: "Greenhouse interior with LED grow lighting system",
   },
@@ -30,7 +30,7 @@ const pillars: Pillar[] = [
     index: "03",
     title: "Knowledge",
     description:
-      "Agronomic expertise drives crop selection, cultivation methods, and every operational decision on the ground — from soil preparation and irrigation scheduling to harvest timing and export-grade quality control.",
+      "Practical farming experience and agricultural knowledge guide each decision. This includes selecting suitable crops, preparing the soil, managing irrigation, choosing the right harvest time, and checking produce for export quality.",
     image: "/why-pearl-gro/pillar-knowledge.jpg",
     alt: "Macro close-up of fresh export-grade tomatoes",
   },
@@ -62,9 +62,8 @@ export default function ThreePillars() {
               className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20"
             >
               <div
-                className={`relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-bg-black ${
-                  i % 2 === 1 ? "lg:order-2" : ""
-                }`}
+                className={`relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-bg-black ${i % 2 === 1 ? "lg:order-2" : ""
+                  }`}
               >
                 <Image
                   src={pillar.image}
