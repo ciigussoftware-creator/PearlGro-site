@@ -40,7 +40,7 @@ export default function GrownToSpec() {
           <div className="overflow-hidden rounded-2xl border border-glow/22 bg-[rgba(10,18,13,0.8)]">
             <div className="relative h-[165px] w-full">
               <Image
-                src="/why-pearl-gro/scotch-bonnet.jpg"
+                src="/why-pearl-gro/scotch-bonnet v2.webp"
                 alt="Scotch bonnet chili macro close-up"
                 fill
                 className="object-cover"
