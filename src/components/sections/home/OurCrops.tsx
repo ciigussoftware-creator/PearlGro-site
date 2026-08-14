@@ -1,12 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/Container";
-
-interface Crop {
-  image: string;
-  category: string;
-  name: string;
-}
+import CropCarousel, {
+  type Crop,
+} from "@/components/sections/home/CropCarousel";
 
 const crops: Crop[] = [
   { image: "/home/crop-scotch-bonnet.jpg", category: "Spice", name: "Scotch Bonnet" },
@@ -14,6 +11,11 @@ const crops: Crop[] = [
   { image: "/home/crop-tomato.jpg", category: "Vegetable", name: "Tomato" },
   { image: "/home/crop-capsicum.jpg", category: "Vegetable", name: "Capsicum" },
   { image: "/home/crop-salad-cucumber.jpg", category: "Vegetable", name: "Salad Cucumber" },
+  { image: "/home/crop-cherry-tomato.jpg", category: "Vegetable", name: "Cherry Tomato" },
+  { image: "/home/crop-lettuce.jpg", category: "Vegetable", name: "Lettuce" },
+  { image: "/home/crop-green-beans.jpg", category: "Vegetable", name: "Green Beans" },
+  { image: "/home/crop-strawberry.jpg", category: "Fruit", name: "Strawberry" },
+  { image: "/home/crop-cantaloupe.jpg", category: "Fruit", name: "Cantaloupe" },
 ];
 
 export default function OurCrops() {
