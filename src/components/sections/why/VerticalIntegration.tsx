@@ -31,7 +31,7 @@ const nodes: Node[] = [
 
 export default function VerticalIntegration() {
   return (
-    <section className="bg-light-bg py-20 lg:py-36">
+    <section className="bg-light-bg py-16 lg:py-20">
       <Container>
         <h2 className="font-heading text-[clamp(32px,4.2vw,46.84px)] font-bold tracking-[-1.17px] text-ink">
           We Build It. We Grow It. We Sell It.

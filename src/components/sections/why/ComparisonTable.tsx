@@ -118,7 +118,7 @@ function Cell({ value, emphasized }: { value: CellValue; emphasized?: boolean })
 
 export default function ComparisonTable() {
   return (
-    <section className="bg-bg-deep py-20 lg:py-[144px]">
+    <section className="bg-bg-deep py-16 lg:py-20">
       <Container>
         <p className="font-mono text-[11px] tracking-[1.98px] text-muted uppercase">
           The Comparison
