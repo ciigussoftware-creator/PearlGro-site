@@ -55,14 +55,14 @@ export default function ThreePillars() {
           />
         </div>
 
-        <div className="mt-20 flex flex-col gap-24 lg:gap-32">
+        <div className="mt-12 flex flex-col gap-10 lg:gap-12">
           {pillars.map((pillar, i) => (
             <div
               key={pillar.title}
               className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20"
             >
               <div
-                className={`relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-bg-black ${i % 2 === 1 ? "lg:order-2" : ""
+                className={`relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-bg-black lg:w-[88%] ${i % 2 === 1 ? "lg:order-2 lg:ml-auto" : ""
                   }`}
               >
                 <Image
@@ -70,15 +70,12 @@ export default function ThreePillars() {
                   alt={pillar.alt}
                   fill
                   className="object-cover"
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  sizes="(min-width: 1024px) 44vw, 100vw"
                 />
               </div>
 
               <div className={i % 2 === 1 ? "lg:order-1" : ""}>
-                <p className="font-mono text-[11px] tracking-[2.2px] text-glow/60">
-                  {pillar.index}
-                </p>
-                <h2 className="pt-4 font-heading text-[clamp(30px,3.6vw,42px)] font-bold tracking-[-1.05px] text-text">
+                <h2 className="font-heading text-[clamp(30px,3.6vw,42px)] font-bold tracking-[-1.05px] text-text">
                   {pillar.title}
                 </h2>
                 <p className="max-w-[400px] pt-5 text-[15px] leading-[1.75] text-muted">
