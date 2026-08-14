@@ -1,12 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/Container";
-
-interface Crop {
-  image: string;
-  category: string;
-  name: string;
-}
+import CropCarousel, {
+  type Crop,
+} from "@/components/sections/home/CropCarousel";
 
 const crops: Crop[] = [
   { image: "/home/crop-scotch-bonnet.jpg", category: "Spice", name: "Scotch Bonnet" },
@@ -14,6 +11,11 @@ const crops: Crop[] = [
   { image: "/home/crop-tomato.jpg", category: "Vegetable", name: "Tomato" },
   { image: "/home/crop-capsicum.jpg", category: "Vegetable", name: "Capsicum" },
   { image: "/home/crop-salad-cucumber.jpg", category: "Vegetable", name: "Salad Cucumber" },
+  { image: "/home/crop-cherry-tomato.jpg", category: "Vegetable", name: "Cherry Tomato" },
+  { image: "/home/crop-lettuce.jpg", category: "Vegetable", name: "Lettuce" },
+  { image: "/home/crop-green-beans.jpg", category: "Vegetable", name: "Green Beans" },
+  { image: "/home/crop-strawberry.jpg", category: "Fruit", name: "Strawberry" },
+  { image: "/home/crop-cantaloupe.jpg", category: "Fruit", name: "Cantaloupe" },
 ];
 
 export default function OurCrops() {
@@ -43,32 +45,7 @@ export default function OurCrops() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 pt-14 sm:grid-cols-3 lg:grid-cols-5">
-          {crops.map((crop) => (
-            <div
-              key={crop.name}
-              className="overflow-hidden rounded-2xl bg-card-light"
-            >
-              <div className="relative aspect-square w-full bg-image-bg-light">
-                <Image
-                  src={crop.image}
-                  alt={crop.name}
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 211px, (min-width: 640px) 33vw, 50vw"
-                />
-              </div>
-              <div className="px-[18px] pt-4 pb-[18px]">
-                <p className="font-mono text-[9px] tracking-[1.35px] text-label uppercase">
-                  {crop.category}
-                </p>
-                <p className="pt-1.5 font-heading text-[15px] font-semibold text-ink">
-                  {crop.name}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <CropCarousel crops={crops} />
       </Container>
     </section>
   );
