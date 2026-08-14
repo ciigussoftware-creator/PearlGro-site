@@ -14,31 +14,31 @@ const pillars: Pillar[] = [
     index: "01",
     title: "Management",
     description:
-      "Experienced oversight of every phase of the project, from land development through cultivation to export. Nothing is left to chance or outsourced accountability — Pearl Gro leads every stage directly.",
-    image: "/why-pearl-gro/pillar-management.jpg",
+      "Pearl Gro manages every stage of the project, from preparing the land and cultivating the crops to packing and export. Close supervision throughout the process helps maintain quality and keep operations running smoothly.",
+    image: "/why-pearl-gro/pillar-management v2.png",
     alt: "Aerial view of agricultural land development",
   },
   {
     index: "02",
     title: "Technology",
     description:
-      "Controlled-environment greenhouse cultivation with renewable energy integration, isolating crops from climate volatility and delivering consistent quality regardless of external conditions.",
-    image: "/why-pearl-gro/pillar-technology.jpg",
+      "Greenhouse technology provides stable growing conditions throughout the year. Controlled irrigation, climate management, and renewable energy help protect crops from changing weather and maintain consistent quality.",
+    image: "/why-pearl-gro/pillar-technology v2.png",
     alt: "Greenhouse interior with LED grow lighting system",
   },
   {
     index: "03",
     title: "Knowledge",
     description:
-      "Agronomic expertise drives crop selection, cultivation methods, and every operational decision on the ground — from soil preparation and irrigation scheduling to harvest timing and export-grade quality control.",
-    image: "/why-pearl-gro/pillar-knowledge.jpg",
+      "Practical farming experience and agricultural knowledge guide each decision. This includes selecting suitable crops, preparing the soil, managing irrigation, choosing the right harvest time, and checking produce for export quality.",
+    image: "/why-pearl-gro/pillar-knowledge v2.png",
     alt: "Macro close-up of fresh export-grade tomatoes",
   },
 ];
 
 export default function ThreePillars() {
   return (
-    <section className="bg-bg-deep py-20 lg:py-[144px]">
+    <section className="bg-bg-deep py-16 lg:py-20">
       <Container>
         <p className="font-mono text-[11px] tracking-[1.98px] text-muted uppercase">
           The Three Pillars
@@ -55,31 +55,27 @@ export default function ThreePillars() {
           />
         </div>
 
-        <div className="mt-20 flex flex-col gap-24 lg:gap-32">
+        <div className="mt-12 flex flex-col gap-10 lg:gap-12">
           {pillars.map((pillar, i) => (
             <div
               key={pillar.title}
               className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20"
             >
               <div
-                className={`relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-bg-black ${
-                  i % 2 === 1 ? "lg:order-2" : ""
-                }`}
+                className={`relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-bg-black lg:w-[88%] ${i % 2 === 1 ? "lg:order-2 lg:ml-auto" : ""
+                  }`}
               >
                 <Image
                   src={pillar.image}
                   alt={pillar.alt}
                   fill
                   className="object-cover"
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  sizes="(min-width: 1024px) 44vw, 100vw"
                 />
               </div>
 
               <div className={i % 2 === 1 ? "lg:order-1" : ""}>
-                <p className="font-mono text-[11px] tracking-[2.2px] text-glow/60">
-                  {pillar.index}
-                </p>
-                <h2 className="pt-4 font-heading text-[clamp(30px,3.6vw,42px)] font-bold tracking-[-1.05px] text-text">
+                <h2 className="font-heading text-[clamp(30px,3.6vw,42px)] font-bold tracking-[-1.05px] text-text">
                   {pillar.title}
                 </h2>
                 <p className="max-w-[400px] pt-5 text-[15px] leading-[1.75] text-muted">

@@ -52,7 +52,7 @@ export default function GalleryExperience() {
 
   return (
     <>
-      <div className="sticky top-18.25 z-40 border-b border-glow/8 bg-bg-black/85 backdrop-blur-xl">
+      <div className="border-b border-glow/8 bg-bg-black/85 backdrop-blur-xl md:sticky md:top-18.25 md:z-40">
         <Container>
           <div
             className="flex flex-wrap items-center gap-x-8 gap-y-3 overflow-x-auto py-3.5"

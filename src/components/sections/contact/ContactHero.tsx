@@ -6,14 +6,14 @@ const contactRows = [
   {
     icon: "/icons/phone.svg",
     label: "Phone",
-    value: "+94 77 000 0000",
-    href: "tel:+94770000000",
+    value: "+164 720 35541",
+    href: "tel:+164 720 35541",
   },
   {
     icon: "/icons/email.svg",
     label: "Email",
-    value: "hello@pearlgro.lk",
-    href: "mailto:hello@pearlgro.lk",
+    value: "info@pearlgro@gmail.com",
+    href: "mailto:info@pearlgro@gmail.com",
   },
   {
     icon: "/icons/location.svg",
@@ -27,7 +27,7 @@ export default function ContactHero() {
     <section className="relative overflow-hidden bg-bg-black">
       <div
         aria-hidden
-        className="pointer-events-none absolute top-1/4 -left-16 size-[500px] rounded-full"
+        className="pointer-events-none absolute top-1/4 -left-16 size-125 rounded-full"
         style={{
           background:
             "radial-gradient(ellipse at center, rgba(47,229,140,0.07) 0%, rgba(0,0,0,0) 65%)",
@@ -35,20 +35,20 @@ export default function ContactHero() {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute right-0 bottom-0 size-[400px] rounded-full"
+        className="pointer-events-none absolute right-0 bottom-0 size-100 rounded-full"
         style={{
           background:
             "radial-gradient(ellipse at center, rgba(47,229,140,0.04) 0%, rgba(0,0,0,0) 65%)",
         }}
       />
 
-      <Container className="relative grid grid-cols-1 gap-16 py-20 lg:grid-cols-2 lg:gap-24 lg:py-[144px]">
+      <Container className="relative grid grid-cols-1 gap-16 pt-10 pb-20 lg:grid-cols-2 lg:gap-24 lg:pt-10 lg:pb-36">
         <div className="flex flex-col items-start">
-          <h1 className="max-w-[480px] font-heading text-[clamp(40px,6.2vw,80px)] leading-[1.02] font-bold tracking-[-2.4px] text-text">
+          <h1 className="max-w-120 font-heading text-[clamp(40px,6.2vw,80px)] leading-[1.02] font-bold tracking-[-2.4px] text-text">
             Get in Touch.
           </h1>
 
-          <p className="max-w-[460px] pt-5 text-[18px] leading-[1.72] text-muted">
+          <p className="max-w-115 pt-5 text-[18px] leading-[1.72] text-muted">
             Questions about Pearl Gro, our projects, or how to get involved?
             We&rsquo;d love to hear from you.
           </p>
@@ -64,7 +64,7 @@ export default function ContactHero() {
                     <span className="font-mono text-[10px] tracking-[1.76px] text-muted/50 uppercase">
                       {row.label}
                     </span>
-                    <span className="text-[16px] leading-[1.5] text-text">
+                    <span className="text-[16px] leading-normal text-text">
                       {row.value}
                     </span>
                   </span>

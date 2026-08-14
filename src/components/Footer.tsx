@@ -26,7 +26,7 @@ export default function Footer() {
     <footer className="relative overflow-hidden border-t border-glow/10 bg-bg-black">
       <p
         aria-hidden
-        className="pointer-events-none absolute bottom-[-0.35em] left-1/2 -translate-x-1/2 select-none whitespace-nowrap font-heading text-[clamp(64px,10vw,128px)] font-bold tracking-[-0.03em] text-text/[0.04]"
+        className="pointer-events-none absolute bottom-[-0.35em] left-1/2 -translate-x-1/2 select-none whitespace-nowrap font-heading text-[clamp(64px,10vw,128px)] font-bold tracking-[-0.03em] text-text/4"
       >
         PEARL GRO
       </p>
@@ -39,7 +39,7 @@ export default function Footer() {
               width={149}
               height={65}
             />
-            <p className="max-w-[260px] pt-4 text-[14px] leading-[1.7] text-muted">
+            <p className="max-w-65 pt-4 text-[14px] leading-[1.7] text-muted">
               Redefining the future of agriculture in Sri Lanka with technology,
               expert knowledge, and management.
             </p>
@@ -49,7 +49,7 @@ export default function Footer() {
                   <a
                     href="#"
                     aria-label={social.label}
-                    className="flex size-[44px] items-center justify-center rounded-[8px] border border-text/10 transition-colors hover:border-accent/40"
+                    className="flex size-11 items-center justify-center rounded-lg border border-text/10 transition-colors hover:border-accent/40"
                   >
                     <Image
                       src={social.icon}
@@ -72,7 +72,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-[14px] leading-[21px] text-muted transition-colors hover:text-text"
+                    className="text-[14px] leading-5.25 text-muted transition-colors hover:text-text"
                   >
                     {link.label}
                   </Link>
@@ -86,40 +86,40 @@ export default function Footer() {
               Contact
             </h2>
             <ul className="flex flex-col gap-4 pt-5">
-              <li className="flex items-start gap-[10px]">
+              <li className="flex items-start gap-2.5">
                 <Image
                   src="/icons/phone.svg"
                   alt=""
                   width={13}
                   height={13}
-                  className="mt-[2px]"
+                  className="mt-0.5"
                 />
-                <span className="text-[14px] leading-[21px] text-muted">
-                  +94 XX XXX XXXX
+                <span className="text-[14px] leading-5.25 text-muted">
+                  +164 720 35541
                 </span>
               </li>
-              <li className="flex items-start gap-[10px]">
+              <li className="flex items-start gap-2.5">
                 <Image
                   src="/icons/email.svg"
                   alt=""
                   width={13}
                   height={13}
-                  className="mt-[2px]"
+                  className="mt-0.5"
                 />
                 <a
                   href="mailto:invest@pearlgro.lk"
-                  className="text-[14px] leading-[21px] text-muted transition-colors hover:text-text"
+                  className="text-[14px] leading-5.25 text-muted transition-colors hover:text-text"
                 >
-                  invest@pearlgro.lk
+                  info@pearlgro@gmail.com
                 </a>
               </li>
-              <li className="flex items-start gap-[10px]">
+              <li className="flex items-start gap-2.5">
                 <Image
                   src="/icons/location.svg"
                   alt=""
                   width={13}
                   height={13}
-                  className="mt-[2px]"
+                  className="mt-0.5"
                 />
                 <span className="text-[14px] leading-[1.6] text-muted">
                   Malsiripura · Thambuttegama
@@ -142,7 +142,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-20 flex flex-col items-center justify-between gap-4 border-t border-text/[0.06] py-8 sm:flex-row">
+        <div className="mt-20 flex flex-col items-center justify-between gap-4 border-t border-text/6 py-8 sm:flex-row">
           <p className="font-mono text-[11px] leading-[16.5px] text-muted/50">
             © 2025 Pearl Gro. All rights reserved.
           </p>

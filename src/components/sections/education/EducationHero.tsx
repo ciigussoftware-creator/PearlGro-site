@@ -38,14 +38,14 @@ export default function EducationHero() {
         />
       </div>
 
-      <Container className="relative flex flex-col items-start py-20 lg:py-[130px]">
+      <Container className="relative flex flex-col items-start py-20 lg:py-32.5">
         <p className="font-mono text-[11px] tracking-[1.98px] text-muted uppercase">
           Learn · Greenhouse Agriculture
         </p>
-        <h1 className="max-w-[820px] pt-6 font-heading text-[clamp(36px,6vw,60px)] leading-[1.05] font-bold tracking-[-1.6px] text-text">
+        <h1 className="max-w-205 pt-6 font-heading text-[clamp(36px,6vw,60px)] leading-[1.05] font-bold tracking-[-1.6px] text-text">
           Understanding Modern Greenhouse Agriculture
         </h1>
-        <p className="max-w-[600px] pt-6 text-[16px] leading-[1.7] text-muted">
+        <p className="max-w-150 pt-6 text-[16px] leading-[1.7] text-muted">
           An inside look at the technology and thinking behind Pearl
           Gro&rsquo;s cultivation model - for students, researchers, and the
           curious.
@@ -59,14 +59,14 @@ export default function EducationHero() {
             <span key={link.href} className="flex items-center">
               <Link
                 href={link.href}
-                className="inline-flex min-h-[44px] items-center font-mono text-[10px] tracking-[1.3px] text-muted uppercase transition-colors hover:text-glow"
+                className="inline-flex min-h-11 items-center font-mono text-[10px] tracking-[1.3px] text-muted uppercase transition-colors hover:text-glow"
               >
                 {link.label}
               </Link>
               {index < contentsLinks.length - 1 && (
                 <span
                   aria-hidden
-                  className="mx-4 h-[10px] w-px bg-glow/20"
+                  className="mx-4 h-2.5 w-px bg-glow/20"
                 />
               )}
             </span>

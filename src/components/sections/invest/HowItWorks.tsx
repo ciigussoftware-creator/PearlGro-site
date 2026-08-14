@@ -40,7 +40,7 @@ export default function HowItWorks() {
           {steps.map((step) => (
             <div key={step.title} className="flex flex-col items-start">
               <div className="flex items-center gap-4">
-                <div className="relative flex size-16 items-center justify-center rounded-full border-2 border-glow bg-bg-deep shadow-[0_0_12px_rgba(47,229,140,0.27)]">
+                <div className="relative flex size-16 items-center justify-center rounded-full border-2 border-accent bg-bg-deep shadow-[0_0_12px_rgba(47,229,140,0.27)]">
                   <Image src={step.icon} alt="" width={22} height={22} />
                 </div>
                 <p className="font-mono text-[11px] tracking-[2.2px] text-label uppercase">
@@ -60,7 +60,7 @@ export default function HowItWorks() {
         </div>
 
         <div className="mt-16 border-t border-ink/10 pt-8">
-          <p className="text-[23px] leading-[1.5] font-semibold tracking-[-0.23px] text-ink">
+          <p className="text-[23px] leading-normal font-semibold tracking-[-0.23px] text-ink">
             You own the stake.{" "}
             <span className="text-ink-accent">
               We manage everything else.
