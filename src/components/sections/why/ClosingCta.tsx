@@ -3,7 +3,7 @@ import Container from "@/components/Container";
 
 export default function ClosingCta() {
   return (
-    <section className="relative overflow-hidden bg-bg-black py-24 lg:py-[144px]">
+    <section className="relative overflow-hidden bg-bg-black py-12 sm:py-16 lg:py-[144px] flex items-center justify-center">
       <div
         aria-hidden
         className="absolute top-0 left-1/2 h-[413px] w-[578px] -translate-x-[calc(50%+250px)]"
@@ -29,19 +29,21 @@ export default function ClosingCta() {
         <h2 className="max-w-[720px] pt-6 font-heading text-[clamp(34px,5.4vw,58px)] leading-[1.1] font-bold tracking-[-1.5px] text-text">
           See the Malsiripura
           <br />
-          <span className="text-gold">Phase 1 Opportunity</span>
+          <span className="text-gold">
+            Phase <strong style={{ color: "#BAE320", fontSize: "1.6em" }}>1</strong> Opportunity
+          </span>
         </h2>
 
         <p className="max-w-[520px] pt-5 text-[15px] leading-[1.6] text-muted">
-          Phase 1 is underway. 10 investor slots available. Allocated on a
+          Phase 1 is underway - 6 slots filled, 4 remaining. Secure yours on a
           first-come basis.
         </p>
 
         <Link
-          href="/invest"
-          className="mt-9 inline-flex h-[55px] items-center justify-center rounded-full bg-gold px-10 text-[15px] font-semibold text-bg-black shadow-[0_0_18px_rgba(232,196,107,0.27)] transition-colors hover:bg-gold/90"
+          href="/invest#Opportunity"
+          className="mt-9 inline-flex h-[55px] items-center justify-center gap-2 rounded-full bg-gold px-10 text-[15px] font-semibold text-bg-black shadow-[0_0_18px_rgba(232,196,107,0.27)] transition-colors hover:bg-gold/90"
         >
-          Explore Phase 1 &rarr;
+          Explore Phase 1 <span style={{ fontSize: "18px", lineHeight: 1 }}></span>
         </Link>
       </Container>
     </section>

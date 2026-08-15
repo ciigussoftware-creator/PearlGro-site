@@ -7,7 +7,7 @@ const crops = ["Scotch Bonnet", "Brinjal", "Tomato", "Capsicum", "Cucumber"];
 
 export default function OpportunityGrid() {
   return (
-    <section className="bg-bg-deep py-10 lg:py-12">
+    <section id="Opportunity" className="bg-bg-deep py-10 lg:py-12">
       <Container>
         <p className="font-mono text-[11px] tracking-[1.98px] text-muted uppercase">
           The Opportunity
