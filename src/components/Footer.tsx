@@ -11,6 +11,8 @@ const footerNavLinks: NavLink[] = [
   { label: "Products", href: "/products" },
   { label: "Education", href: "/education" },
   { label: "Gallery", href: "/gallery" },
+  { label: "Careers", href: "/careers" },
+  { label: "Partners", href: "/partners" },
 ];
 
 const socialLinks = [

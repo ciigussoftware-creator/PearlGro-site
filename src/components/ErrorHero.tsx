@@ -22,7 +22,7 @@ export default function ErrorHero({
   wayfinding,
 }: ErrorHeroProps) {
   return (
-    <section className="relative flex min-h-[600px] items-center justify-center overflow-hidden bg-bg-deep px-6 py-24 lg:py-32">
+    <section className="relative flex min-h-[600px] items-center justify-center overflow-hidden bg-bg-deep px-6 py-12 lg:py-20">
       <div
         aria-hidden
         className="pointer-events-none absolute top-1/2 left-1/2 h-175 w-175 -translate-x-1/2 -translate-y-1/2"
