@@ -11,7 +11,7 @@ const specs = [
 
 export default function GrownToSpec() {
   return (
-    <section className="bg-bg-black py-20 lg:py-[144px]">
+    <section className="bg-bg-black py-16 lg:py-20">
       <Container>
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-20">
           <div>
@@ -40,7 +40,7 @@ export default function GrownToSpec() {
           <div className="overflow-hidden rounded-2xl border border-glow/22 bg-[rgba(10,18,13,0.8)]">
             <div className="relative h-[165px] w-full">
               <Image
-                src="/why-pearl-gro/scotch-bonnet.jpg"
+                src="/why-pearl-gro/scotch-bonnet v2.webp"
                 alt="Scotch bonnet chili macro close-up"
                 fill
                 className="object-cover"

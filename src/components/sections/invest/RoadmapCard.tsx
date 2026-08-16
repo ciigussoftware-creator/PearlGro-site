@@ -47,7 +47,7 @@ export default function RoadmapCard({
         className={`mt-4 flex w-full flex-col items-start rounded-[18px] border-x border-b border-t-2 px-5 py-6 transition-transform ${
           isOpen
             ? "border-glow/28 bg-[rgba(12,22,16,0.8)] hover:-translate-y-2 hover:shadow-[0_0_24px_rgba(47,229,140,0.16)]"
-            : "border-muted/8 bg-[rgba(8,12,9,0.45)] opacity-40"
+            : "h-[200px] border-muted/8 bg-[rgba(8,12,9,0.45)] opacity-40"
         }`}
       >
         <span

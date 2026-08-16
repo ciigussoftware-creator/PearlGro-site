@@ -52,6 +52,17 @@ html::-webkit-scrollbar {
   display: none;
 }
 
+/* Utility for scrollable containers (e.g. swipeable carousels) that keep
+   native touch/keyboard scrolling but hide the visible scrollbar track. */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   background-color: var(--color-bg-deep);
   color: var(--color-text);

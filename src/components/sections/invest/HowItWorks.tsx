@@ -43,7 +43,7 @@ export default function HowItWorks() {
                 <div className="relative flex size-16 items-center justify-center rounded-full border-2 border-accent bg-bg-deep shadow-[0_0_12px_rgba(47,229,140,0.27)]">
                   <Image src={step.icon} alt="" width={22} height={22} />
                 </div>
-                <p className="font-mono text-[11px] tracking-[2.2px] text-label uppercase">
+                <p className="font-mono text-[13px] font-bold tracking-[2px] text-label uppercase">
                   {step.step}
                 </p>
               </div>
