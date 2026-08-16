@@ -4,8 +4,10 @@ import type { ReactNode } from "react";
 interface OpportunityStatCardProps {
   label: string;
   value: string;
+  valueHidden?: boolean;
   variant?: "default" | "gold" | "muted";
   icon?: string;
+  className?: string;
   children: ReactNode;
 }
 
@@ -39,13 +41,15 @@ const labelVariantClasses: Record<
 export default function OpportunityStatCard({
   label,
   value,
+  valueHidden = false,
   variant = "default",
   icon,
+  className = "",
   children,
 }: OpportunityStatCardProps) {
   return (
     <div
-      className={`flex flex-col gap-2 rounded-[18px] border-x border-b border-t-2 px-6 pt-6 pb-[33px] ${cardVariantClasses[variant]}`}
+      className={`flex flex-col gap-1.5 rounded-[18px] border-x border-b border-t-2 px-6 pt-3 pb-4 ${cardVariantClasses[variant]} ${className}`}
     >
       <div className="flex items-start justify-between gap-2">
         <p
@@ -64,11 +68,13 @@ export default function OpportunityStatCard({
         )}
       </div>
 
-      <p
-        className={`font-mono text-[29px] leading-[1] font-light tracking-[-0.59px] ${valueVariantClasses[variant]}`}
-      >
-        {value}
-      </p>
+      {!valueHidden && (
+        <p
+          className={`font-mono text-[29px] leading-[1] font-light tracking-[-0.59px] ${valueVariantClasses[variant]}`}
+        >
+          {value}
+        </p>
+      )}
 
       {children}
     </div>
