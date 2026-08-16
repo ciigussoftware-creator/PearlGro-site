@@ -28,7 +28,7 @@ export default function InvestHero() {
         />
       </div>
 
-      <Container className="relative flex min-h-[90vh] flex-col items-start justify-start pt-16 pb-16 lg:min-h-[110vh] lg:justify-center lg:pt-20 lg:pb-64">
+      <Container className="relative flex min-h-[90vh] flex-col items-start justify-center pt-16 pb-16 lg:min-h-[110vh] lg:justify-center lg:pt-20 lg:pb-64">
         <div className="flex items-center gap-[10px]">
           <span className="size-2 rounded-full bg-glow opacity-55 shadow-[0_0_4px_#2fe58c]" />
           <p className="font-mono text-[11px] tracking-[1.98px] text-muted uppercase">
