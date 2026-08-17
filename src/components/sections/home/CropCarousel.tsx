@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "@/lib/gsap";
 
@@ -14,33 +14,72 @@ interface CropCarouselProps {
   crops: Crop[];
 }
 
+const AUTO_SCROLL_INTERVAL_MS = 6500;
+
 export default function CropCarousel({ crops }: CropCarouselProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const isPausedRef = useRef(false);
 
-  const scrollByPage = (direction: 1 | -1) => {
+  const scrollByPage = useCallback((direction: 1 | -1) => {
     const el = scrollRef.current;
     if (!el) return;
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
     ).matches;
     const maxScroll = el.scrollWidth - el.clientWidth;
-    const target = Math.min(
-      Math.max(el.scrollLeft + direction * el.clientWidth * 0.85, 0),
-      maxScroll,
-    );
+    const atEnd = el.scrollLeft >= maxScroll - 2;
+    const atStart = el.scrollLeft <= 2;
+    // Looping past either end keeps the auto-scroll (and the arrow buttons)
+    // feeling continuous instead of getting stuck at the last card.
+    const target =
+      direction === 1 && atEnd
+        ? 0
+        : direction === -1 && atStart
+          ? maxScroll
+          : Math.min(
+              Math.max(el.scrollLeft + direction * el.clientWidth * 0.85, 0),
+              maxScroll,
+            );
     // Native `behavior: "smooth"` scrolling conflicts with `scroll-snap-type:
     // mandatory` in Chromium and barely moves the container, so the
     // button-triggered scroll is tweened with GSAP instead. Native touch/
     // trackpad/wheel scrolling on the row itself is unaffected.
     gsap.to(el, {
       scrollLeft: target,
-      duration: prefersReducedMotion ? 0 : 0.5,
-      ease: "power2.out",
+      duration: prefersReducedMotion ? 0 : 1,
+      ease: "power2.inOut",
     });
+  }, []);
+
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    if (prefersReducedMotion) return;
+
+    const interval = setInterval(() => {
+      if (!isPausedRef.current) scrollByPage(1);
+    }, AUTO_SCROLL_INTERVAL_MS);
+
+    return () => clearInterval(interval);
+  }, [scrollByPage]);
+
+  const pauseAutoScroll = () => {
+    isPausedRef.current = true;
+  };
+  const resumeAutoScroll = () => {
+    isPausedRef.current = false;
   };
 
   return (
-    <div className="mt-14">
+    <div
+      className="mt-14"
+      onMouseEnter={pauseAutoScroll}
+      onMouseLeave={resumeAutoScroll}
+      onFocus={pauseAutoScroll}
+      onBlur={resumeAutoScroll}
+      onTouchStart={pauseAutoScroll}
+    >
       <div
         ref={scrollRef}
         role="region"
