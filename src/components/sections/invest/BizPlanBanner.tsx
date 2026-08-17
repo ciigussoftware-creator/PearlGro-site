@@ -1,7 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import Container from "@/components/Container";
 
 export default function BizPlanBanner() {
+  const handleClick = () => {
+    const isMobile = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    if (isMobile) {
+      window.location.href = "mailto:info@pearlgro.lk?subject=Business%20Plan%20Request&body=Hi%20Pearl%20Gro%20Team%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20the%20full%20business%20plan.%0A%0AName%3A%20%0AContact%3A%20%0A%0AThank%20you.";
+    } else {
+      window.open("https://mail.google.com/mail/?view=cm&to=info@pearlgro.lk&su=Business%20Plan%20Request&body=Hi%20Pearl%20Gro%20Team%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20the%20full%20business%20plan.%0A%0AName%3A%20%0AContact%3A%20%0A%0AThank%20you.", "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <section className="bg-bg-black py-10 lg:py-12">
       <Container>
@@ -26,14 +37,13 @@ export default function BizPlanBanner() {
             </div>
           </div>
 
-          <a
-            href="https://mail.google.com/mail/?view=cm&to=info@pearlgro.lk&su=Business%20Plan%20Request&body=Hi%20Pearl%20Gro%20Team%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20the%20full%20business%20plan.%0A%0AName%3A%20%0AContact%3A%20%0A%0AThank%20you."
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            onClick={handleClick}
             className="inline-flex h-[53px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-gold px-10 text-[15px] font-semibold text-gold transition-colors hover:bg-gold/10"
           >
             Request the Business Plan
-          </a>
+          </button>
         </div>
       </Container>
     </section>
