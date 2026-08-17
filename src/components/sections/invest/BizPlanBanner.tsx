@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import Container from "@/components/Container";
 
 export default function BizPlanBanner() {
@@ -27,12 +26,14 @@ export default function BizPlanBanner() {
             </div>
           </div>
 
-          <Link
-            href="mailto:invest@pearlgro.lk?subject=Business%20Plan%20Request"
+          <a
+            href="https://mail.google.com/mail/?view=cm&to=info@pearlgro.lk&su=Business%20Plan%20Request&body=Hi%20Pearl%20Gro%20Team%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20the%20full%20business%20plan.%0A%0AName%3A%20%0AContact%3A%20%0A%0AThank%20you."
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex h-[53px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-gold px-10 text-[15px] font-semibold text-gold transition-colors hover:bg-gold/10"
           >
             Request the Business Plan
-          </Link>
+          </a>
         </div>
       </Container>
     </section>
