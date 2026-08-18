@@ -6,7 +6,7 @@ export default function SoftClosing() {
   return (
     <section className="bg-bg-deep py-20 lg:py-[100px]">
       <Container className="flex flex-col items-center gap-3 text-center">
-        <p className="max-w-[400px] font-heading text-[23px] leading-[1.55] text-muted">
+        <p className="max-w-[440px] font-heading text-[28px] leading-[1.45] font-bold text-muted">
           Curious about Pearl Gro&rsquo;s own approach?
         </p>
         <Link

@@ -20,7 +20,7 @@ const stages: Stage[] = [
     label: "Stage 01",
     title: "Propagation & Seeding",
     description:
-      "Germination and root establishment in sterile, climate-perfect nursery conditions - no weather variables, no soil-borne disease risk.",
+      "Germination and root establishment in sterile, climate-perfect nursery conditions - no weather variables, no soil-borne disease risk. Seedlings are graded for vigor before transplant, so only the strongest plants move forward into active cultivation.",
     image: "/education/stage-propagation.jpg",
     imageAlt: "Plant sprouts in a propagation tray",
   },
@@ -28,7 +28,7 @@ const stages: Stage[] = [
     label: "Stage 02",
     title: "Growth Zone Transition",
     description:
-      "Seedlings move to primary cultivation bays with nutrient delivery customized to each growth stage - oxygen, mineral balance, and spacing all managed.",
+      "Seedlings move to primary cultivation bays with nutrient delivery customized to each growth stage - oxygen, mineral balance, and spacing all managed. Support structures are fitted as plants mature, guiding growth for even light exposure and easier harvesting later.",
     image: "/education/stage-growth-zone.jpg",
     imageAlt: "Crop rows growing under greenhouse lighting",
   },
@@ -36,13 +36,13 @@ const stages: Stage[] = [
     label: "Stage 03",
     title: "Precision Monitoring",
     description:
-      "IoT sensors track leaf temperature, EC levels, and root-zone moisture in real time. Biological pest management reduces reliance on synthetic chemicals.",
+      "IoT sensors track leaf temperature, EC levels, and root-zone moisture in real time. Biological pest management reduces reliance on synthetic chemicals. Readings feed a central dashboard so the agronomy team can adjust irrigation, ventilation, and nutrient dosing before stress ever shows in the crop.",
   },
   {
     label: "Stage 04",
     title: "Harvest & Cold-Chain Logistics",
     description:
-      "Crops are harvested at nutritional peak and rapidly refrigerated, preserving freshness across the cold chain from greenhouse to export shelf.",
+      "Crops are harvested at nutritional peak and rapidly refrigerated, preserving freshness across the cold chain from greenhouse to export shelf. Produce is sorted and packed on-site to export-grade standards, minimizing handling time between the vine and the shipping container.",
     image: "/education/stage-harvest.jpg",
     imageAlt: "Export-grade tomatoes harvested",
   },
@@ -135,7 +135,7 @@ export default function SeedToShelf() {
                 <div key={stage.label} className="relative">
                   <div
                     data-timeline-dot
-                    className="absolute top-2 -left-10 flex size-5 items-center justify-center rounded-full border-2 border-glow bg-bg-black shadow-[0_0_13px_rgba(47,229,140,0.4)] sm:-left-14"
+                    className="absolute top-2 -left-7 flex size-5 -translate-x-1/2 items-center justify-center rounded-full border-2 border-glow bg-bg-black shadow-[0_0_13px_rgba(47,229,140,0.4)] sm:-left-10"
                   />
 
                   <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-16">
@@ -180,7 +180,7 @@ export default function SeedToShelf() {
             <div className="relative">
               <div
                 data-timeline-dot
-                className="absolute top-0 -left-10 size-4 rounded-full bg-glow shadow-[0_0_16px_rgba(47,229,140,0.53)] sm:-left-14"
+                className="absolute top-0 -left-7 size-4 -translate-x-1/2 rounded-full bg-glow shadow-[0_0_16px_rgba(47,229,140,0.53)] sm:-left-10"
               />
               <p className="font-mono text-[10px] tracking-[2.2px] text-glow uppercase">
                 Shelf
